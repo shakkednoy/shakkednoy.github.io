@@ -1,6 +1,3 @@
-Hi, I'm Shakked! I'm currently a first-year PhD student in the Economics Department at MIT. My research interests are in labor economics, political economy, and behavioral economics.
+I am an assistant professor in economics, management and strategy at [HKU Business School](https://www.hkubs.hku.hk/). Here is my __[CV](/pdf/CV.pdf)__. You can reach me at [mbwong@hku.hk](mailto:mbwong@hku.hk) or DM me on [Twitter](https://twitter.com/mbwong) or [Wechat](weixin://dl/chat?mblwong). 
 
-I'm originally from New Zealand, where I studied economics, math, and philosophy at Victoria University of Wellington. I then worked as a research assistant at Motu Economic & Public Policy Research and at MIT before starting my PhD.
-
-__[Curriculum Vitae](/static/cv.pdf)__ 
-
+If you're a student interested in monetary or labor economics, I will be hiring RAs. Email me if interested! 
