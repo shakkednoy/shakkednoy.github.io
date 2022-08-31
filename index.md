@@ -9,9 +9,9 @@ I'm originally from New Zealand, where I studied economics, math, and philosophy
 On this website, you can find my [research](http://shakkednoy.com/research/) and my [CV](http://shakkednoy.com/cv.pdf).
 
 
-sidebar:
-  text: >
-    [![img](shakkednoy_cropped.jpg)](https://shakkednoy.com/shakkednoy_cropped.jpg)
-
+<div align="center"> 
+  <img src="shakkednoy_cropped.jpg" width="50%" /> 
+</div>
+![image](https://user-images.githubusercontent.com/30334726/187748390-ed8ea187-919a-4037-91f2-3ba8a40e9474.png)
 
 
