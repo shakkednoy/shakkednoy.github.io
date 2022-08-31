@@ -8,8 +8,10 @@ I'm originally from New Zealand, where I studied economics, math, and philosophy
 
 On this website, you can find my [research](http://shakkednoy.com/research/) and my [CV](http://shakkednoy.com/cv.pdf).
 
-<div align="center"> 
-  <img src="shakkednoy_cropped.jpg" width="50%" /> 
-</div>
+
+sidebar:
+  text: >
+    [![img](shakkednoy_cropped.jpg)](https://shakkednoy.com/shakkednoy_cropped.jpg)
+
 
 
