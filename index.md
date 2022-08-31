@@ -3,7 +3,7 @@ layout: page
 ---
 
 <div align="center"> 
-  <img src="shakkednoy_long.jpg" width="50%" height="50%" /> 
+  <img src="shakkednoy_cropped.jpg" width="50%" /> 
 </div>
 
 Hi, I'm Shakked! Beginning in fall 2022, I'll be a first-year PhD student in the Economics Department at MIT. I'm interested in labor economics, behavioral economics, and political economy.
