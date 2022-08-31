@@ -2,7 +2,7 @@
 layout: page
 ---
 
-<h1> Research </h1>
+<h1> Publications </h1>
 
 [The German Model of Industrial Relations: Balancing Flexibility and Collective Action](jep_germany.pdf) (with Simon Jäger and Benjamin Schoefer)<br/>
 _Journal of Economic Perspectives_, forthcoming <br/>
@@ -12,13 +12,6 @@ We give an overview of the two pillars of the “German model” of industrial r
 </details><br/>
 
 
-[Codetermination and Power in the Workplace](epi_21.pdf) (with Simon Jäger and Benjamin Schoefer)<br/>
-To be published in the _Journal of Law and Political Economy_<br/>
-[Economic Policy Institute Working Paper](https://www.epi.org/unequalpower/publications/codetermination-and-power-in-the-workplace/), prepared as part of the EPI's Unequal Power Series<br/>
-<details>
-  <summary>Click to expand abstract</summary>
-How does codetermination—entitling workers to participate in firm governance, either through membership on company boards or the formation of works councils—affect worker welfare and corporate decision making? We critically discuss the history and contemporary operation of European codetermination arrangements and review empirical evidence on their effects on firms and workers. Our review suggests that these arrangements are unlikely to significantly shift power in the workplace, but may mildly improve worker welfare and firm performance, in part by boosting information-sharing and cooperation and in part by slightly increasing worker influence.
-</details><br/>
 
 [What Does Codetermination Do?](wdcd_ilrr.pdf) (with Simon Jäger and Benjamin Schoefer)<br/>
 _ILR Review_, 2022, 75(4), p.857-890<br/> 
@@ -27,14 +20,6 @@ _ILR Review_, 2022, 75(4), p.857-890<br/>
 <details>
   <summary>Click to expand abstract</summary>
 We provide a comprehensive overview of codetermination, i.e., worker representation in firms’ governance and management. The available micro evidence points to zero or small positive effects of codetermination on worker and firm outcomes, and leaves room for moderate positive effects on productivity, wages, and job stability. We also present new country-level, general-equilibrium event studies of codetermination reforms between the 1960s and 2010s, finding no effects on aggregate economic outcomes or the quality of industrial relations. We offer three explanations of the institution’s limited impact. First, existing codetermination laws convey little authority to workers. Second, countries with codetermination laws have high baseline levels of informal worker voice. Third, codetermination laws may interact with other labor market institutions, such as union representation and collective bargaining. We close by discussing implications for recent codetermination proposals in the United States.
-</details><br/>
-
-[People Judge Discrimination Against Women More Harshly Than Discrimination Against Men – Does Statistical Fairness Discrimination Explain Why?](efs_published.pdf) (with Jan Feld and Eberhard Feess)<br/>
-_Frontiers in Psychology_, 2021, 12, p.3504<br/>
-[Replication Package](https://osf.io/2eq43/)<br/>
-<details>
-  <summary>Click to expand abstract</summary>
-Previous research has shown that people care less about men than about women who are left behind. We show that this finding extends to the domain of labor market discrimination: In identical scenarios, people judge discrimination against women more morally bad than discrimination against men. This result holds in a representative sample of the US population and in a larger but not representative sample of Amazon Mechanical Turk (Mturk) respondents. We test if this gender gap is driven by statistical fairness discrimination, a process in which people use the gender of the victim to draw inferences about other characteristics which matter for their fairness judgments. We test this explanation with a survey experiment in which we explicitly hold information about the victim of discrimination constant. Our results provide only mixed support for the statistical fairness discrimination explanation. In our representative sample, we see no meaningful or significant effect of the information treatments. By contrast, in our Mturk sample, we see that providing additional information partly reduces the effect of the victim’s gender on judgment of the discriminator. While people may engage in statistical fairness discrimination, this process is unlikely to be an exhaustive explanation for why discrimination against women is judged as worse.
 </details><br/>
 
 
@@ -46,7 +31,25 @@ _Journal of Economic Behavior and Organization_, 2021, 185, p.918-945<br/>
 We investigate how a person’s happiness is affected by the incomes of her neighbors and coworkers. Using an unprecedentedly rich combination of administrative and survey data, we establish two central results. First, a person’s happiness is sensitive to her ordinal rank within her peer income distribution: people are happier the higher their income rank. Second, workplace rank matters much more than neighborhood rank. We confirm that our results reflect a causal effect of peer income by implementing sensitivity analyses, identifying off changes in peer income over time for immobile people, exploiting plausibly exogenous moves between workplaces triggered by mass layoffs, and testing for the effects of unobservable group-level confounders. 
 </details><br/>
 
-<h1> Old Working Papers </h1>
+<h1> Policy and Other Research </h1>
+
+[Codetermination and Power in the Workplace](epi_21.pdf) (with Simon Jäger and Benjamin Schoefer)<br/>
+To be published in the _Journal of Law and Political Economy_<br/>
+[Economic Policy Institute Working Paper](https://www.epi.org/unequalpower/publications/codetermination-and-power-in-the-workplace/), prepared as part of the EPI's Unequal Power Series<br/>
+<details>
+  <summary>Click to expand abstract</summary>
+How does codetermination—entitling workers to participate in firm governance, either through membership on company boards or the formation of works councils—affect worker welfare and corporate decision making? We critically discuss the history and contemporary operation of European codetermination arrangements and review empirical evidence on their effects on firms and workers. Our review suggests that these arrangements are unlikely to significantly shift power in the workplace, but may mildly improve worker welfare and firm performance, in part by boosting information-sharing and cooperation and in part by slightly increasing worker influence.
+</details><br/>
+
+[People Judge Discrimination Against Women More Harshly Than Discrimination Against Men – Does Statistical Fairness Discrimination Explain Why?](efs_published.pdf) (with Jan Feld and Eberhard Feess)<br/>
+_Frontiers in Psychology_, 2021, 12, p.3504<br/>
+[Replication Package](https://osf.io/2eq43/)<br/>
+<details>
+  <summary>Click to expand abstract</summary>
+Previous research has shown that people care less about men than about women who are left behind. We show that this finding extends to the domain of labor market discrimination: In identical scenarios, people judge discrimination against women more morally bad than discrimination against men. This result holds in a representative sample of the US population and in a larger but not representative sample of Amazon Mechanical Turk (Mturk) respondents. We test if this gender gap is driven by statistical fairness discrimination, a process in which people use the gender of the victim to draw inferences about other characteristics which matter for their fairness judgments. We test this explanation with a survey experiment in which we explicitly hold information about the victim of discrimination constant. Our results provide only mixed support for the statistical fairness discrimination explanation. In our representative sample, we see no meaningful or significant effect of the information treatments. By contrast, in our Mturk sample, we see that providing additional information partly reduces the effect of the victim’s gender on judgment of the discriminator. While people may engage in statistical fairness discrimination, this process is unlikely to be an exhaustive explanation for why discrimination against women is judged as worse.
+</details><br/>
+
+
 
 [The Drivers of Mothers' Parental Leave Decisions: Evidence from the Growing Up in New Zealand Survey](leave_21.pdf) (with Isabelle Sin)<br/>
 _Motu Working Paper 21-08_, 2021<br/> 
