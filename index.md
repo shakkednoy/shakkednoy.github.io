@@ -12,6 +12,5 @@ On this website, you can find my [research](http://shakkednoy.com/research/) and
 <div align="center"> 
   <img src="shakkednoy_cropped.jpg" width="50%" /> 
 </div>
-![image](https://user-images.githubusercontent.com/30334726/187748390-ed8ea187-919a-4037-91f2-3ba8a40e9474.png)
 
 
