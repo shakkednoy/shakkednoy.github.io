@@ -24,7 +24,8 @@ _Journal of Economic Behavior and Organization_, 2021, 185, p.918-945<br/>
 <h2> Policy Research </h1>
 
 [Codetermination and Power in the Workplace](epi_21.pdf) (with Simon Jäger and Benjamin Schoefer)<br/>
-_Journal of Law and Political Economy_, forthcoming; originally prepared for the Economic Policy Institute's Unequal Power Project<br/>
+_Journal of Law and Political Economy_, forthcoming
+Originally prepared for the Economic Policy Institute's Unequal Power Project<br/>
 
 
 
