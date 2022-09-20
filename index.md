@@ -12,8 +12,8 @@ On this website, you can find my [research](http://shakkednoy.com/research/) and
 
 <h1> Publications </h1>
 
-[The German Model of Industrial Relations: Balancing Flexibility and Collective Action](jep_germany.pdf) (with Simon Jäger and Benjamin Schoefer)<br/>
-_Journal of Economic Perspectives_, forthcoming <br/>
+[The German Model of Industrial Relations: Balancing Flexibility and Collective Action](jep_germany.pdf) (with Simon Jäger and Benjamin Schoefer)
+_Journal of Economic Perspectives_, forthcoming
 <details>
   <summary>Click to expand abstract</summary>
 We give an overview of the two pillars of the “German model” of industrial relations: sectoral collective bargaining and firm-level codetermination. Relative to the United States, Germany outsources collective bargaining to the sectoral level, resulting in higher coverage and the avoidance of firm-level distributional conflict. Relative to other European countries, Germany makes it easy for employers to avoid coverage or use flexibility provisions to deviate downwards from collective agreements. The greater flexibility of the German system may reduce unemployment, but may also erode bargaining coverage and increase inequality. Meanwhile, firm-level codetermination through worker board representation and works councils creates cooperative dialogue between employers and workers. Board representation has few direct impacts owing to worker representatives’ minority vote share, but works councils, which hold a range of substantive powers, may be more impactful. Overall, the German model highlights tensions between efficiency-enhancing flexibility and equity-enhancing collective action.
