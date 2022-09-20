@@ -12,8 +12,7 @@ On this website, you can find my [research](http://shakkednoy.com/research/) and
 
 <h1> Publications </h1>
 
-[The German Model of Industrial Relations: Balancing Flexibility and Collective Action](jep_germany.pdf) (with Simon Jäger and Benjamin Schoefer)
-
+[The German Model of Industrial Relations: Balancing Flexibility and Collective Action](jep_germany.pdf) (with Simon Jäger and Benjamin Schoefer)<br/>
 _Journal of Economic Perspectives_, forthcoming
 <details>
   <summary>Click to expand abstract</summary>
