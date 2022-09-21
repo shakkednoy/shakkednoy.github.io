@@ -25,8 +25,5 @@ Originally prepared for the Economic Policy Institute's Unequal Power Project<br
 
 
 
-<div align="center"> 
-  <img src="shakkednoy_cropped.jpg" width="50%" /> 
-</div>
 
 
