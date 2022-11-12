@@ -5,7 +5,9 @@ layout: page
 <h1> Publications </h1>
 
 [The German Model of Industrial Relations: Balancing Flexibility and Collective Action](jep_germany.pdf) (with Simon Jäger and Benjamin Schoefer)<br/>
-_Journal of Economic Perspectives_, forthcoming <br/>
+_Journal of Economic Perspectives_, 2022, 36(4), p.53-80 <br/>
+[Published Version (open-access)](https://www.aeaweb.org/articles?id=10.1257/jep.36.4.53)<br/>
+[Replication Package](https://www.openicpsr.org/openicpsr/project/176722/version/V1/view)<br/>
 <details>
   <summary>Click to expand abstract</summary>
 We give an overview of the two pillars of the “German model” of industrial relations: sectoral collective bargaining and firm-level codetermination. Relative to the United States, Germany outsources collective bargaining to the sectoral level, resulting in higher coverage and the avoidance of firm-level distributional conflict. Relative to other European countries, Germany makes it easy for employers to avoid coverage or use flexibility provisions to deviate downwards from collective agreements. The greater flexibility of the German system may reduce unemployment, but may also erode bargaining coverage and increase inequality. Meanwhile, firm-level codetermination through worker board representation and works councils creates cooperative dialogue between employers and workers. Board representation has few direct impacts owing to worker representatives’ minority vote share, but works councils, which hold a range of substantive powers, may be more impactful. Overall, the German model highlights tensions between efficiency-enhancing flexibility and equity-enhancing collective action.
@@ -34,7 +36,7 @@ We investigate how a person’s happiness is affected by the incomes of her neig
 <h1> Policy and Other Research </h1>
 
 [Codetermination and Power in the Workplace](epi_21.pdf) (with Simon Jäger and Benjamin Schoefer)<br/>
-To be published in the _Journal of Law and Political Economy_<br/>
+_Journal of Law and Political Economy_, 2022, 3(1)<br/>
 [Economic Policy Institute Working Paper](https://www.epi.org/unequalpower/publications/codetermination-and-power-in-the-workplace/), prepared as part of the EPI's Unequal Power Series<br/>
 <details>
   <summary>Click to expand abstract</summary>
