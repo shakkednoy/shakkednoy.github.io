@@ -9,7 +9,7 @@ On this website, you can find my [research](http://shakkednoy.com/research/) and
 <h2> Publications </h2>
 
 [The German Model of Industrial Relations: Balancing Flexibility and Collective Action](jep_germany.pdf) (with Simon Jäger and Benjamin Schoefer)<br/>
-_Journal of Economic Perspectives_, forthcoming
+_Journal of Economic Perspectives_, 2022, 36(4), p.53-80
 
 [What Does Codetermination Do?](wdcd_ilrr.pdf) (with Simon Jäger and Benjamin Schoefer)<br/>
 _ILR Review_, 2022, 75(4), p.857-890<br/> 
@@ -20,8 +20,8 @@ _Journal of Economic Behavior and Organization_, 2021, 185, p.918-945<br/>
 <h2> Policy Research </h2>
 
 [Codetermination and Power in the Workplace](epi_21.pdf) (with Simon Jäger and Benjamin Schoefer)<br/>
-_Journal of Law and Political Economy_, forthcoming<br/>
-Originally prepared for the Economic Policy Institute's Unequal Power Project<br/>
+_Journal of Law and Political Economy_, 2022, 3(1)<br/>
+Special issue for the Economic Policy Institute's Unequal Power Series<br/>
 
 
 
