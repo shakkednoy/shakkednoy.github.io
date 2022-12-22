@@ -19,8 +19,8 @@ _Journal of Economic Behavior and Organization_, 2021, 185, p.918-945<br/>
 
 <h2> Policy Research </h2>
 
-[The Short-termism of 'Hard' Economics](https://www.cesifo.org/en/publications/2022/working-paper/short-termism-hard-economics) (with Ilan Noy)
-CESifo Working Paper, 2022, 3(1)<br/>
+[The Short-termism of 'Hard' Economics](https://www.cesifo.org/en/publications/2022/working-paper/short-termism-hard-economics) (with Ilan Noy)<br/>
+_CESifo Working Paper_, 2022<br/>
 Invited for a volume of essays about longtermism<br/>
 
 [Codetermination and Power in the Workplace](epi_21.pdf) (with Simon Jäger and Benjamin Schoefer)<br/>
