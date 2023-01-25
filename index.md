@@ -2,6 +2,10 @@
 layout: page
 ---
 
+<div align="center"> 
+  <img src="shakkednoy.jpg" width="50%" /> 
+</div>
+
 Hi, I'm Shakked! I'm a first-year PhD student in the Economics Department at MIT, interested in labor economics, behavioral economics, and political economy.
 
 On this website, you can find my [research](http://shakkednoy.com/research/) and my [CV](http://shakkednoy.com/cv.pdf). Below, you can find an abridged list of working papers and publications.
