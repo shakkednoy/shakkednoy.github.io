@@ -2,6 +2,16 @@
 layout: page
 ---
 
+<h1> Working Papers </h1>
+
+[Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence](Noy_Zhang.pdf) (with Whitney Zhang)<br/>
+[Online Appendix](Noy_Zhang_Appendix.pdf)<br/>
+<details>
+  <summary>Click to expand abstract</summary>
+We examine the productivity effects of a generative artificial intelligence technology—the assistive chatbot ChatGPT—in the context of mid-level professional writing tasks. In a preregistered online experiment, we assign occupation-specific, incentivized writing tasks to 444 college-educated professionals, and randomly expose half of them to ChatGPT. Our results show that ChatGPT substantially raises average productivity: time taken
+decreases by 0.8 SDs and output quality rises by 0.4 SDs. Inequality between workers decreases, as ChatGPT compresses the productivity distribution by benefiting low-ability workers more. ChatGPT mostly substitutes for worker effort rather than complementing worker skills, and restructures tasks towards idea-generation and editing and away from rough-drafting. Exposure to ChatGPT increases job satisfaction and self-efficacy and heightens both concern and excitement about automation technologies.
+</details><br/>
+
 <h1> Publications </h1>
 
 [The German Model of Industrial Relations: Balancing Flexibility and Collective Action](jep_germany.pdf) (with Simon Jäger and Benjamin Schoefer)<br/>
