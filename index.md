@@ -12,7 +12,7 @@ On this website, you can find my [research](http://shakkednoy.com/research/) and
 
 <h2> Working Papers </h2>
 
-[Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence](https://economics.mit.edu/sites/default/files/inline-files/Noy_Zhang_1.pdf) (with Whitney Zhang)<br/>
+[Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence](https://economics.mit.edu/sites/default/files/inline-files/Noy_Zhang_1_0.pdf) (with Whitney Zhang)<br/>
 
 <h2> Publications </h2>
 
