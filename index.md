@@ -29,7 +29,7 @@ _Journal of Economic Behavior and Organization_, 2021, 185, p.918-945<br/>
 
 [The Short-Termism of 'Hard' Economics](longtermism.pdf) (with Ilan Noy)<br/>
 _CESifo Working Paper_, 2022<br/>
-Invited for a volume of essays about longtermism<br/>
+Invited for a volume of essays about longtermism, to be published by Oxford University Press in 2024<br/>
 
 [Codetermination and Power in the Workplace](epi_21.pdf) (with Simon Jäger and Benjamin Schoefer)<br/>
 _Journal of Law and Political Economy_, 2022, 3(1)<br/>
