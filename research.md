@@ -4,7 +4,7 @@ layout: page
 
 <h1> Working Papers </h1>
 
-[Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence](https://economics.mit.edu/sites/default/files/inline-files/Noy_Zhang_1_0.pdf) (with Whitney Zhang)<br/>
+[Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence](Noy%20Zhang%20NBER%20SI.pdf) (with Whitney Zhang)<br/>
 [Online Appendix](https://economics.mit.edu/sites/default/files/inline-files/Noy_Zhang_Appendix.pdf)<br/>
 <details>
   <summary>Click to expand abstract</summary>
