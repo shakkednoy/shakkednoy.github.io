@@ -6,6 +6,7 @@ layout: page
 
 [Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence](Noy%20Zhang%20NBER%20SI.pdf) (with Whitney Zhang)<br/>
 [Online Appendix](ChatGPT_SM.pdf)<br/>
+[Replication Package](https://osf.io/xd7qw/)<br/>
 <details>
   <summary>Click to expand abstract</summary>
 We examined the productivity effects of a generative artificial intelligence
