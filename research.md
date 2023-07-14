@@ -8,8 +8,15 @@ layout: page
 [Online Appendix](ChatGPT_SM.pdf)<br/>
 <details>
   <summary>Click to expand abstract</summary>
-We examine the productivity effects of a generative artificial intelligence technology—the assistive chatbot ChatGPT—in the context of mid-level professional writing tasks. In a preregistered online experiment, we assign occupation-specific, incentivized writing tasks to 444 college-educated professionals, and randomly expose half of them to ChatGPT. Our results show that ChatGPT substantially raises average productivity: time taken
-decreases by 0.8 SDs and output quality rises by 0.4 SDs. Inequality between workers decreases, as ChatGPT compresses the productivity distribution by benefiting low-ability workers more. ChatGPT mostly substitutes for worker effort rather than complementing worker skills, and restructures tasks towards idea-generation and editing and away from rough-drafting. Exposure to ChatGPT increases job satisfaction and self-efficacy and heightens both concern and excitement about automation technologies.
+We examined the productivity effects of a generative artificial intelligence
+10 technology—the assistive chatbot ChatGPT—in the context of mid-level professional writing
+tasks. In a preregistered online experiment, we assigned occupation-specific, incentivized writing
+tasks to 453 college-educated professionals, and randomly exposed half of them to ChatGPT.
+Our results show that ChatGPT substantially raised productivity: average time taken decreased
+by 40% and output quality rose by 18%. Inequality between workers decreased, and concern and
+15 excitement about AI temporarily rose. Workers exposed to ChatGPT during the experiment were
+2x as likely to report using it in their real job two weeks after the experiment, and 1.6x as likely
+two months after the experiment.
 </details><br/>
 
 <h1> Publications </h1>
