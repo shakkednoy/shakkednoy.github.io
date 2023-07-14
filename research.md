@@ -2,9 +2,11 @@
 layout: page
 ---
 
-<h1> Working Papers </h1>
+
+<h1> Publications </h1>
 
 [Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence](Noy%20Zhang%20NBER%20SI.pdf) (with Whitney Zhang)<br/>
+_Science_, 2023, 381(6654), p.187-192
 [Online Appendix](ChatGPT_SM.pdf)<br/>
 [Replication Package](https://osf.io/xd7qw/)<br/>
 <details>
@@ -19,8 +21,6 @@ by 40% and output quality rose by 18%. Inequality between workers decreased, and
 2x as likely to report using it in their real job two weeks after the experiment, and 1.6x as likely
 two months after the experiment.
 </details><br/>
-
-<h1> Publications </h1>
 
 [The German Model of Industrial Relations: Balancing Flexibility and Collective Action](jep_germany.pdf) (with Simon Jäger and Benjamin Schoefer)<br/>
 _Journal of Economic Perspectives_, 2022, 36(4), p.53-80 <br/>
