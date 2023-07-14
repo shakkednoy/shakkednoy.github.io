@@ -5,7 +5,7 @@ layout: page
 <h1> Working Papers </h1>
 
 [Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence](Noy%20Zhang%20NBER%20SI.pdf) (with Whitney Zhang)<br/>
-[Online Appendix](https://economics.mit.edu/sites/default/files/inline-files/Noy_Zhang_Appendix.pdf)<br/>
+[Online Appendix](ChatGPT_SM.pdf)<br/>
 <details>
   <summary>Click to expand abstract</summary>
 We examine the productivity effects of a generative artificial intelligence technology—the assistive chatbot ChatGPT—in the context of mid-level professional writing tasks. In a preregistered online experiment, we assign occupation-specific, incentivized writing tasks to 444 college-educated professionals, and randomly expose half of them to ChatGPT. Our results show that ChatGPT substantially raises average productivity: time taken
