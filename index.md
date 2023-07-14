@@ -10,12 +10,11 @@ Hi, I'm Shakked! I'm a first-year PhD student in the Economics Department at MIT
 
 On this website, you can find my [research](http://shakkednoy.com/research/) and my [CV](http://shakkednoy.com/cv.pdf). Below, you can find an abridged list of working papers and publications.
 
-<h2> Working Papers </h2>
-
-[Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence](Noy%20Zhang%20NBER%20SI.pdf) (with Whitney Zhang)<br/>
-Accepted, _Science_
 
 <h2> Publications </h2>
+
+[Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence](Noy%20Zhang%20NBER%20SI.pdf) (with Whitney Zhang)<br/>
+_Science_, 2023, 381(6654), p.187-192
 
 [The German Model of Industrial Relations: Balancing Flexibility and Collective Action](jep_germany.pdf) (with Simon Jäger and Benjamin Schoefer)<br/>
 _Journal of Economic Perspectives_, 2022, 36(4), p.53-80
