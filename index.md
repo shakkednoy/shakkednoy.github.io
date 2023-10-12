@@ -10,9 +10,10 @@ Hi, I'm Shakked! I'm a second-year PhD student in the Economics Department at MI
 
 On this website, you can find my [research](http://shakkednoy.com/research/) and my [CV](http://shakkednoy.com/cv.pdf). Below, you can find an abridged list of working papers and publications.
 
-
 <h2> Working Papers </h2>
 [Lost in Transmission](LiT.pdf) (with Thomas Graeber and Chris Roth)<br/>
+
+[Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence](Noy%20Zhang%20NBER%20SI.pdf) (with Whitney Zhang)
 
 <h2> Publications </h2>
 
