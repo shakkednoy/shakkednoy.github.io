@@ -12,6 +12,7 @@ On this website, you can find my [research](http://shakkednoy.com/research/) and
 
 <h2> Working Papers </h2>
 [Lost in Transmission](LiT.pdf) (with Thomas Graeber and Chris Roth)<br/>
+Last updated: January 2024
 
 <h2> Publications </h2>
 
