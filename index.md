@@ -38,6 +38,10 @@ Invited for a volume of essays about longtermism, to be published by Oxford Univ
 _Journal of Law and Political Economy_, 2022, 3(1)<br/>
 Special issue for the Economic Policy Institute's Unequal Power Series<br/>
 
+[Explaining the Reliability of our Mathematical Beliefs](phil489.pdf)<br/>
+_Philosophy Honors Thesis_, 2019<br/>
+
+
 
 
 
