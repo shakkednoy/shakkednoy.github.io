@@ -28,7 +28,7 @@ _ILR Review_, 2022, 75(4), p.857-890<br/>
 [The Effects of Neighborhood and Workplace Income Comparisons on Subjective Wellbeing](thesis_jeboR2.pdf) (with Isabelle Sin)<br/>
 _Journal of Economic Behavior and Organization_, 2021, 185, p.918-945<br/>
 
-<h2> Policy Research </h2>
+<h2> Other Research </h2>
 
 [The Short-Termism of 'Hard' Economics](longtermism.pdf) (with Ilan Noy)<br/>
 _CESifo Working Paper_, 2022<br/>
