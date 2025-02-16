@@ -5,7 +5,8 @@ layout: page
 
 <h1> Publications </h1>
 
-[Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence](Noy%20Zhang%20NBER%20SI.pdf) (with Whitney Zhang)<br/>
+[Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence](Noy%20Zhang%20NBER%20SI.pdf)
+(with Whitney Zhang)<br/>
 _Science_, 2023, 381(6654), p.187-192 <br/>
 [Online Appendix](ChatGPT_SM.pdf)<br/>
 [Replication Package](https://osf.io/xd7qw/)<br/>
