@@ -1,0 +1,111 @@
+<!DOCTYPE html> 
+<html>
+  <head>    
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Shakked Noy">
+    <meta name="description" content="Shakked Noy - PhD student in Economics at MIT">
+    
+    <!-- Title -->
+    <title>Shakked Noy</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    
+    <!-- Favicon (using existing Jekyll favicon if available) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- Custom styles for gray links -->
+    <style>
+      .gl {
+        color: gray;
+        text-decoration: none;
+      }
+      .gl:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head> 
+
+  <body> 
+    <div class="body">
+      <!-- Left sidebar with photo and bio -->
+      <div class="block" id="left">
+        <h1>Shakked Noy</h1> 
+        <br>
+        <img src="shakkednoy.jpg" alt="Shakked Noy Photo">
+        
+        <p>Hi, I'm Shakked! I'm a third-year PhD student in the Economics Department at MIT, interested in behavioral economics, political economy, and labor economics.</p>
+        
+        <p>On this website, you can find my research and my CV. Below, you can find an abridged list of working papers and publications.</p>
+
+        <!-- Contact information -->
+        <div class="contact-links">
+          <a href="mailto:snoy@mit.edu" onmouseover="this.querySelector('.email-text').style.textDecoration='underline'" onmouseout="this.querySelector('.email-text').style.textDecoration='none'">
+            <span class="email-icon">&#9997;&#xFE0E;</span>
+            <span class="email-text" style="text-decoration-thickness: 2px;">snoy@mit.edu</span>
+          </a>
+
+          <a id="special-cv-link" class="graylinks cv-link" href="cv.pdf">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="slategray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 2H14L20 8V22H6V2Z"></path>
+              <path d="M14 2V8H20"></path>
+              <line x1="10" y1="12" x2="16" y2="12"></line>
+              <line x1="10" y1="16" x2="16" y2="16"></line>
+            </svg>
+            <span>CV</span>
+          </a>
+        </div>
+
+        <!-- Social links -->
+        <div class="contact-links" style="margin-top: 10px;">
+          <a href="https://github.com/shakkednoy" class="gl">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://twitter.com/shakked_noy" class="gl">
+            <i class="fab fa-twitter"></i> Twitter
+          </a>
+        </div>
+      </div>
+      
+      <!-- Right content area -->
+      <div class="block" id="right">
+        <!-- Working Papers Section -->
+        <h2 class="no_top_margin">Working Papers</h2> 
+        <div id="papersList"></div>
+        <hr style="border: 0; height: 1px; background-color: gray;">
+
+        <!-- Publications Section -->
+        <h2 class="bottom-three">Publications</h2> 
+        <div id="publicationsList"></div>
+        <hr style="border: 0; height: 1px; background-color: gray;">
+
+        <!-- Other Research Section -->
+        <h2 class="bottom-three">Other Research</h2>
+        
+        <div style="margin-bottom: 1rem;">
+          <a href="longtermism.pdf">The Short-Termism of 'Hard' Economics</a> (with <a href="https://www.victoria.ac.nz/sef/about/staff/ilan-noy">Ilan Noy</a>)<br/>
+          <em>CESifo Working Paper</em>, 2022<br/>
+          Invited for a volume of essays about longtermism, to be published by Oxford University Press in 2024<br/>
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <a href="epi_21.pdf">Codetermination and Power in the Workplace</a> (with <a href="https://economics.mit.edu/faculty/sjaeger">Simon Jäger</a> and <a href="https://economics.berkeley.edu/faculty/schoefer">Benjamin Schoefer</a>)<br/>
+          <em>Journal of Law and Political Economy</em>, 2022, 3(1)<br/>
+          Special issue for the Economic Policy Institute's Unequal Power Series<br/>
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <a href="phil489.pdf">Explaining the Reliability of our Mathematical Beliefs</a><br/>
+          <em>Philosophy Honors Thesis</em>, 2019<br/>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript for dynamic content loading -->
+    <script src="js/loadContent.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Lost in Transmission",
+    "authors": [
+      {"name": "Thomas Graeber", "link": "https://www.thomasgraeber.com/"},
+      {"name": "Chris Roth", "link": "https://sites.google.com/site/chrisrotheconomics/"}
+    ],
+    "date": "November 2024",
+    "pdf": "LiT.pdf",
+    "abstract": "This paper studies how information transmission affects economic decision-making. We investigate the mechanisms through which information gets lost or distorted as it moves between agents, and analyze the implications for policy design and market outcomes."
+  }
+]

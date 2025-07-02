@@ -1,0 +1,76 @@
+[
+  {
+    "title": "Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence",
+    "authors": [
+      {"name": "Whitney Zhang", "link": "https://www.whitneyzhang.com/"}
+    ],
+    "date": "Science, 2023, 381(6654), p.187-192",
+    "pdf": "Noy%20Zhang%20NBER%20SI.pdf",
+    "abstract": "We examined the productivity effects of a generative artificial intelligence technology—the assistive chatbot ChatGPT—in the context of mid-level professional writing tasks. In a preregistered online experiment, we assigned occupation-specific, incentivized writing tasks to 453 college-educated professionals, and randomly exposed half of them to ChatGPT. Our results show that ChatGPT substantially raised productivity: average time taken decreased by 40% and output quality rose by 18%. Inequality between workers decreased, and concern and excitement about AI temporarily rose. Workers exposed to ChatGPT during the experiment were 2x as likely to report using it in their real job two weeks after the experiment, and 1.6x as likely two months after the experiment.",
+    "extraLinks": [
+      {
+        "text": "Online Appendix",
+        "url": "ChatGPT_SM.pdf"
+      },
+      {
+        "text": "Replication Package",
+        "url": "https://osf.io/xd7qw/"
+      }
+    ]
+  },
+  {
+    "title": "The German Model of Industrial Relations: Balancing Flexibility and Collective Action",
+    "authors": [
+      {"name": "Simon Jäger", "link": "https://economics.mit.edu/faculty/sjaeger"},
+      {"name": "Benjamin Schoefer", "link": "https://economics.berkeley.edu/faculty/schoefer"}
+    ],
+    "date": "Journal of Economic Perspectives, 2022, 36(4), p.53-80",
+    "pdf": "jep_germany.pdf",
+    "abstract": "We give an overview of the two pillars of the \"German model\" of industrial relations: sectoral collective bargaining and firm-level codetermination. Relative to the United States, Germany outsources collective bargaining to the sectoral level, resulting in higher coverage and the avoidance of firm-level distributional conflict. Relative to other European countries, Germany makes it easy for employers to avoid coverage or use flexibility provisions to deviate downwards from collective agreements. The greater flexibility of the German system may reduce unemployment, but may also erode bargaining coverage and increase inequality. Meanwhile, firm-level codetermination through worker board representation and works councils creates cooperative dialogue between employers and workers. Board representation has few direct impacts owing to worker representatives' minority vote share, but works councils, which hold a range of substantive powers, may be more impactful. Overall, the German model highlights tensions between efficiency-enhancing flexibility and equity-enhancing collective action.",
+    "extraLinks": [
+      {
+        "text": "Published Version (open-access)",
+        "url": "https://www.aeaweb.org/articles?id=10.1257/jep.36.4.53"
+      },
+      {
+        "text": "Replication Package",
+        "url": "https://www.openicpsr.org/openicpsr/project/176722/version/V1/view"
+      }
+    ]
+  },
+  {
+    "title": "What Does Codetermination Do?",
+    "authors": [
+      {"name": "Simon Jäger", "link": "https://economics.mit.edu/faculty/sjaeger"},
+      {"name": "Benjamin Schoefer", "link": "https://economics.berkeley.edu/faculty/schoefer"}
+    ],
+    "date": "ILR Review, 2022, 75(4), p.857-890",
+    "pdf": "wdcd_ilrr.pdf",
+    "abstract": "We provide a comprehensive overview of codetermination, i.e., worker representation in firms' governance and management. The available micro evidence points to zero or small positive effects of codetermination on worker and firm outcomes, and leaves room for moderate positive effects on productivity, wages, and job stability. We also present new country-level, general-equilibrium event studies of codetermination reforms between the 1960s and 2010s, finding no effects on aggregate economic outcomes or the quality of industrial relations. We offer three explanations of the institution's limited impact. First, existing codetermination laws convey little authority to workers. Second, countries with codetermination laws have high baseline levels of informal worker voice. Third, codetermination laws may interact with other labor market institutions, such as union representation and collective bargaining. We close by discussing implications for recent codetermination proposals in the United States.",
+    "extraLinks": [
+      {
+        "text": "Summary for Harvard Law School Forum",
+        "url": "https://corpgov.law.harvard.edu/2021/06/29/what-does-codetermination-do/"
+      },
+      {
+        "text": "Replication Package",
+        "url": "https://github.com/shakkednoy/wdcd_replication"
+      }
+    ]
+  },
+  {
+    "title": "The Effects of Neighborhood and Workplace Income Comparisons on Subjective Wellbeing",
+    "authors": [
+      {"name": "Isabelle Sin", "link": "https://motu.nz/about-us/people/isabelle-sin/"}
+    ],
+    "date": "Journal of Economic Behavior and Organization, 2021, 185, p.918-945",
+    "pdf": "thesis_jeboR2.pdf",
+    "abstract": "We investigate how a person's happiness is affected by the incomes of her neighbors and coworkers. Using an unprecedentedly rich combination of administrative and survey data, we establish two central results. First, a person's happiness is sensitive to her ordinal rank within her peer income distribution: people are happier the higher their income rank. Second, workplace rank matters much more than neighborhood rank. We confirm that our results reflect a causal effect of peer income by implementing sensitivity analyses, identifying off changes in peer income over time for immobile people, exploiting plausibly exogenous moves between workplaces triggered by mass layoffs, and testing for the effects of unobservable group-level confounders.",
+    "extraLinks": [
+      {
+        "text": "Master's Thesis version",
+        "url": "mcom.pdf"
+      }
+    ]
+  }
+]

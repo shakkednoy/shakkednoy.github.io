@@ -1,0 +1,203 @@
+function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
+  if (addPeriodBeforeDate === undefined) {
+    addPeriodBeforeDate = true;
+  }
+  
+  const papersList = document.getElementById(containerID);
+  if (!papersList) {
+    console.error(`Container with ID ${containerID} not found`);
+    return;
+  }
+  
+  papersList.innerHTML = '';
+
+  // SVG Document Icon
+  const documentIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+      style="vertical-align: middle; position: relative; top: -1.5px;"
+      xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 2H14L20 8V22H6V2Z"></path>
+        <path d="M14 2V8H20"></path>
+        <line x1="10" y1="12" x2="16" y2="12"></line>
+        <line x1="10" y1="16" x2="16" y2="16"></line>
+  </svg>`;
+  
+  // Set default arrow (up) with 180deg rotation.
+  const arrowIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      style="vertical-align: middle; position: relative; top: -1.5px; left:1px; transition: transform 0.3s; transform: rotate(180deg);"
+      class="arrow-icon"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 5 L12 19" />
+      <path d="M7 14 L12 19 L17 14" />
+  </svg>`;
+  
+  // Replication archive icon (terminal icon)
+  const replicationArchiveIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="14" height="14" style="vertical-align: middle; position: relative; top: -1.5px;">
+    <rect x="0" y="0" width="100" height="100" rx="16" ry="16" fill="#708090"/>
+    <path d="M25 30 L45 40 L25 50" fill="none" stroke="white" stroke-width="6" stroke-linecap="round"/>
+    <rect x="55" y="45" width="20" height="4" fill="white" rx="2" ry="2"/>
+  </svg>`;
+  
+  // Survey instruments icon
+  const surveyInstrumentsIcon = `<svg width="14" height="14" viewBox="0 0 24 24" style="vertical-align: middle; position: relative; top: -1.5px;" fill="slategray" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+  </svg>`;
+  
+  jsonList.forEach((paper) => {
+    let extraLinksHTML = '';
+    if (paper.extraLinks) {
+      paper.extraLinks.forEach(link => {
+        const cleanedText = link.text.replace(/\\|"/g, '').trim();
+        
+        const isReplicationArchive = cleanedText.toLowerCase().includes("replication archive");
+        const isSurveyInstruments = cleanedText.toLowerCase().includes("survey");
+        const icon = isReplicationArchive ? replicationArchiveIcon : 
+                     isSurveyInstruments ? surveyInstrumentsIcon : 
+                     documentIcon;
+        
+        extraLinksHTML += `<a href="${link.url}" class="graylinks">${icon} ${isReplicationArchive ? '&nbsp;' : ''}${link.text}</a>`;
+      });
+    }
+    
+    let authorsHTML = '';
+    if (paper.authors && paper.authors.length > 0) {
+      if (paper.authors.length === 1) {
+        authorsHTML = `<a href="${paper.authors[0].link}">${paper.authors[0].name}</a>`;
+      } else if (paper.authors.length === 2) {
+        authorsHTML = `${paper.authors.map(author => `<a href="${author.link}">${author.name}</a>`).join(' and ')}`;
+      } else {
+        authorsHTML = paper.authors.slice(0, -1).map(author => `<a href="${author.link}">${author.name}</a>`).join(', ') + 
+                      ', and ' + 
+                      `<a href="${paper.authors[paper.authors.length - 1].link}">${paper.authors[paper.authors.length - 1].name}</a>`;
+      }
+    }
+    
+    let datePeriod = addPeriodBeforeDate ? '. ' : ', ';
+    let html = `<a href="${paper.pdf}">${paper.title}</a>`;
+    
+    if (authorsHTML) {
+      html += `, with ${authorsHTML}`;
+    }
+    
+    html += `${datePeriod}${paper.date}.`;
+    
+    if (paper.appendedText) {
+      html += ` ${paper.appendedText}`;
+    }
+    
+    const abstractId = `ab-${paper.title.replace(/\s+/g, '-').replace(/[^\w-]/g, '').toLowerCase()}`;
+    
+    html += `
+      <ul style="position: relative; left: -40px;">
+        <a onclick="toggleAbstract('${abstractId}')" class="graylinks abstract-toggle">${arrowIcon} Abstract</a>
+        ${extraLinksHTML}
+        <p id="${abstractId}" class="abstract-hide">
+          ${paper.abstract}
+        </p>
+      </ul>
+      <br/>
+    `;
+    
+    papersList.innerHTML += html;
+  });
+}
+
+function toggleAbstract(id) {
+  const abstract = document.getElementById(id);
+  if (!abstract) return;
+  
+  const arrowIcon = event.currentTarget.querySelector('.arrow-icon');
+  
+  if (abstract.classList.contains('abstract-hide')) {
+    abstract.classList.remove('abstract-hide');
+    abstract.classList.add('abstract-show');
+    if (arrowIcon) arrowIcon.style.transform = 'rotate(0deg)';
+  } else {
+    abstract.classList.remove('abstract-show');
+    abstract.classList.add('abstract-hide');
+    if (arrowIcon) arrowIcon.style.transform = 'rotate(180deg)';
+  }
+}
+
+// Load content when page loads
+document.addEventListener("DOMContentLoaded", function() {
+  // Load working papers
+  fetch('data/working-papers.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+      }
+      return response.json();
+    })
+    .then(papers => {
+      populatePapers(papers, 'papersList', false);
+    })
+    .catch(error => {
+      console.error("Fetch error for working-papers.json:", error);
+      // Fallback content if JSON fails to load
+      const fallbackElement = document.getElementById('papersList');
+      if (fallbackElement) {
+        fallbackElement.innerHTML = `
+          <div style="margin-bottom: 1rem;">
+            <a href="LiT.pdf">Lost in Transmission</a> (with <a href="https://www.thomasgraeber.com/">Thomas Graeber</a> and <a href="https://sites.google.com/site/chrisrotheconomics/">Chris Roth</a>)<br/>
+            Last updated: November 2024
+          </div>
+        `;
+      }
+    });
+
+  // Load publications
+  fetch('data/publications.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+      }
+      return response.json();
+    })
+    .then(papers => {
+      populatePapers(papers, 'publicationsList', true);
+    })
+    .catch(error => {
+      console.error("Fetch error for publications.json:", error);
+      // Fallback content if JSON fails to load
+      const fallbackElement = document.getElementById('publicationsList');
+      if (fallbackElement) {
+        fallbackElement.innerHTML = `
+          <div style="margin-bottom: 1rem;">
+            <a href="Noy%20Zhang%20NBER%20SI.pdf">Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence</a> (with <a href="https://www.whitneyzhang.com/">Whitney Zhang</a>)<br/>
+            <em>Science</em>, 2023, 381(6654), p.187-192
+          </div>
+          <div style="margin-bottom: 1rem;">
+            <a href="jep_germany.pdf">The German Model of Industrial Relations: Balancing Flexibility and Collective Action</a> (with <a href="https://economics.mit.edu/faculty/sjaeger">Simon Jäger</a> and <a href="https://economics.berkeley.edu/faculty/schoefer">Benjamin Schoefer</a>)<br/>
+            <em>Journal of Economic Perspectives</em>, 2022, 36(4), p.53-80
+          </div>
+          <div style="margin-bottom: 1rem;">
+            <a href="wdcd_ilrr.pdf">What Does Codetermination Do?</a> (with <a href="https://economics.mit.edu/faculty/sjaeger">Simon Jäger</a> and <a href="https://economics.berkeley.edu/faculty/schoefer">Benjamin Schoefer</a>)<br/>
+            <em>ILR Review</em>, 2022, 75(4), p.857-890
+          </div>
+          <div style="margin-bottom: 1rem;">
+            <a href="thesis_jeboR2.pdf">The Effects of Neighborhood and Workplace Income Comparisons on Subjective Wellbeing</a> (with <a href="https://motu.nz/about-us/people/isabelle-sin/">Isabelle Sin</a>)<br/>
+            <em>Journal of Economic Behavior and Organization</em>, 2021, 185, p.918-945
+          </div>
+        `;
+      }
+    });
+
+  // Load other research (if container exists)
+  const otherResearchContainer = document.getElementById('otherResearchList');
+  if (otherResearchContainer) {
+    fetch('data/other-research.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+      })
+      .then(papers => {
+        populatePapers(papers, 'otherResearchList', true);
+      })
+      .catch(error => {
+        console.error("Fetch error for other-research.json:", error);
+        // Keep the static HTML fallback if JSON fails
+      });
+  }
+});
