@@ -71,14 +71,13 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
       }
     }
     
-    let datePeriod = addPeriodBeforeDate ? '. ' : ', ';
     let html = `<a href="${paper.pdf}">${paper.title}</a>`;
     
     if (authorsHTML) {
       html += `, with ${authorsHTML}`;
     }
     
-    html += `${datePeriod}${paper.date}.`;
+    html += `<br><em>${paper.date}</em>`;
     
     if (paper.appendedText) {
       html += ` ${paper.appendedText}`;
