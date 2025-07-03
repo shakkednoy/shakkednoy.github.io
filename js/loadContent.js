@@ -21,14 +21,8 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
         <line x1="10" y1="16" x2="16" y2="16"></line>
   </svg>`;
   
-  // Set default arrow (up) with 180deg rotation.
-  const arrowIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-      style="vertical-align: middle; position: relative; top: -1.5px; left:1px; transition: transform 0.3s; transform: rotate(180deg);"
-      class="arrow-icon"
-      xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 5 L12 19" />
-      <path d="M7 14 L12 19 L17 14" />
-  </svg>`;
+  // Plus icon (default state - collapsed)
+  const plusIcon = `<span style="vertical-align: middle; position: relative; top: -1.5px; left:1px; font-weight: bold; font-size: 14px;" class="toggle-icon">+</span>`;
   
   // Replication archive icon (terminal icon)
   const replicationArchiveIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="14" height="14" style="vertical-align: middle; position: relative; top: -1.5px;">
@@ -105,7 +99,7 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
     
     html += `
       <ul style="position: relative; left: -40px;">
-        <a onclick="toggleAbstract('${abstractId}')" class="graylinks abstract-toggle">${arrowIcon} Abstract</a>
+        <a onclick="toggleAbstract('${abstractId}')" class="graylinks abstract-toggle">${plusIcon} Abstract</a>
         ${extraLinksHTML}
         <p id="${abstractId}" class="abstract-hide">
           ${paper.abstract}
@@ -122,16 +116,16 @@ function toggleAbstract(id) {
   const abstract = document.getElementById(id);
   if (!abstract) return;
   
-  const arrowIcon = event.currentTarget.querySelector('.arrow-icon');
+  const toggleIcon = event.currentTarget.querySelector('.toggle-icon');
   
   if (abstract.classList.contains('abstract-hide')) {
     abstract.classList.remove('abstract-hide');
     abstract.classList.add('abstract-show');
-    if (arrowIcon) arrowIcon.style.transform = 'rotate(0deg)';
+    if (toggleIcon) toggleIcon.textContent = '−';
   } else {
     abstract.classList.remove('abstract-show');
     abstract.classList.add('abstract-hide');
-    if (arrowIcon) arrowIcon.style.transform = 'rotate(180deg)';
+    if (toggleIcon) toggleIcon.textContent = '+';
   }
 }
 

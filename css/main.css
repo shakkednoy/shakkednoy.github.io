@@ -38,11 +38,9 @@ h2 {
 }
 
 img {
-  width: 130px;
+  width: 182px;
   max-width: 100%;
   height: auto;
-  display: block;
-  margin: 0 auto;
 }
 
 li {
@@ -57,7 +55,7 @@ li {
   }
 
   img {
-    width: 150px;
+    width: 210px;
   }
     
   #left {
