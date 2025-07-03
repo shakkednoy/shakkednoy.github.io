@@ -77,7 +77,25 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
       html += `, with ${authorsHTML}`;
     }
     
-    html += `<br><em>${paper.date}</em>`;
+    // Parse the date to italicize only journal names
+    let dateWithItalics = paper.date;
+    
+    // Only italicize if it contains a journal name (not just years or "Working Paper" etc)
+    if (!dateWithItalics.includes('Working Paper') && 
+        !dateWithItalics.includes('Thesis') && 
+        !dateWithItalics.match(/^\w+ \d{4}$/)) { // Not just "Month Year"
+      
+      // Common journal patterns to italicize
+      dateWithItalics = dateWithItalics
+        .replace(/(Science|Nature|Cell|PNAS)/, '<em>$1</em>')
+        .replace(/(Journal of [^,]+)/, '<em>$1</em>')
+        .replace(/(American Economic Review|Quarterly Journal of Economics|Review of Economic Studies)/, '<em>$1</em>')
+        .replace(/(ILR Review|Economic Journal|European Economic Review)/, '<em>$1</em>')
+        .replace(/(Frontiers in [^,]+)/, '<em>$1</em>')
+        .replace(/(CESifo Working Paper)/, '<em>$1</em>');
+    }
+    
+    html += `<br>${dateWithItalics}`;
     
     if (paper.appendedText) {
       html += ` ${paper.appendedText}`;
