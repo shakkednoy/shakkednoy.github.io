@@ -86,7 +86,13 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
         .replace(/(American Economic Review|Quarterly Journal of Economics|Review of Economic Studies)/, '<em>$1</em>')
         .replace(/(ILR Review|Economic Journal|European Economic Review)/, '<em>$1</em>')
         .replace(/(Frontiers in [^,]+)/, '<em>$1</em>')
-        .replace(/(CESifo Working Paper)/, '<em>$1</em>');
+        .replace(/(CESifo Working Paper)/, '<em>$1</em>')
+        .replace(/(Essays on Longtermism)/, '<em>$1</em>');
+    }
+    
+    // Also handle "In [book title]" format
+    if (dateWithItalics.startsWith('In ')) {
+      dateWithItalics = dateWithItalics.replace(/In ([^,]+),/, 'In <em>$1</em>,');
     }
     
     html += `<br>${dateWithItalics}`;
