@@ -55,13 +55,13 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
     let authorsHTML = '';
     if (paper.authors && paper.authors.length > 0) {
       if (paper.authors.length === 1) {
-        authorsHTML = `<a href="${paper.authors[0].link}">${paper.authors[0].name}</a>`;
+        authorsHTML = `<a href="${paper.authors[0].link}">${paper.authors[0].name}</a>${paper.authors[0].suffix || ''}`;
       } else if (paper.authors.length === 2) {
-        authorsHTML = `${paper.authors.map(author => `<a href="${author.link}">${author.name}</a>`).join(' and ')}`;
+        authorsHTML = `${paper.authors.map(author => `<a href="${author.link}">${author.name}</a>${author.suffix || ''}`).join(' and ')}`;
       } else {
-        authorsHTML = paper.authors.slice(0, -1).map(author => `<a href="${author.link}">${author.name}</a>`).join(', ') + 
-                      ', and ' + 
-                      `<a href="${paper.authors[paper.authors.length - 1].link}">${paper.authors[paper.authors.length - 1].name}</a>`;
+        authorsHTML = paper.authors.slice(0, -1).map(author => `<a href="${author.link}">${author.name}</a>${author.suffix || ''}`).join(', ') +
+                      ', and ' +
+                      `<a href="${paper.authors[paper.authors.length - 1].link}">${paper.authors[paper.authors[paper.authors.length - 1].name}</a>${paper.authors[paper.authors.length - 1].suffix || ''}`;
       }
     }
     
