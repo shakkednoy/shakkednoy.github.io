@@ -59,9 +59,10 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
       } else if (paper.authors.length === 2) {
         authorsHTML = `${paper.authors.map(author => `<a href="${author.link}">${author.name}</a>${author.suffix || ''}`).join(' and ')}`;
       } else {
+        const lastAuthor = paper.authors[paper.authors.length - 1];
         authorsHTML = paper.authors.slice(0, -1).map(author => `<a href="${author.link}">${author.name}</a>${author.suffix || ''}`).join(', ') +
                       ', and ' +
-                      `<a href="${paper.authors[paper.authors.length - 1].link}">${paper.authors[paper.authors[paper.authors.length - 1].name}</a>${paper.authors[paper.authors.length - 1].suffix || ''}`;
+                      `<a href="${lastAuthor.link}">${lastAuthor.name}</a>${lastAuthor.suffix || ''}`;
       }
     }
     
