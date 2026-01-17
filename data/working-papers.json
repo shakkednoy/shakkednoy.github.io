@@ -4,7 +4,7 @@
     "authors": [
       {"name": "Aakaash Rao", "link": "https://aakaashrao.github.io/", "suffix": " (his JMP!)"}
     ],
-    "date": "November 2025",
+    "date": "December 2025",
     "pdf": "https://www.dropbox.com/scl/fi/27v4xxenpo8wotkw1238e/rao-jmp.pdf?rlkey=x8rg0slqo9mwfhdlbqgftaw4b&e=1&dl=0",
     "abstract": "We link the contemporary American \"culture war\" to changes in media technologies in the 1980s and to the cable news networks which responded to the new incentives of the era. We first show that cable news emphasizes culture-war issues much more, and economic issues much less, than older broadcast news or politicians. Using household-by-second smart TV data, we trace cable news' emphasis on cultural over economic issues to a distinctive business strategy: culture attracts viewers who would otherwise not watch news (\"mobilization\"); economics attracts viewers who would otherwise watch competing news outlets (\"poaching\"); and the number mobilized by culture is greater than the number poached by economics, so culture increases viewership. We highlight the parallel to politicians — who also trade off \"mobilizing\" nonvoters against \"poaching\" competitors' voters — but show why mobilization-focused strategies are disadvantaged in politics: cable outlets maximize audience <em>size</em> and so value poaching and mobilization equally, but politicians maximize vote <em>share</em> and so value poaching twice as much as mobilization. Cable news' incentive to center mobilizing culture war content influences politics: constituencies more exposed to cable news assign greater importance to cultural issues, and politicians respond by supplying more cultural ads. Our estimates suggest that cable news can account for one-third of the time-series increase in cultural conflict since 2000."
   },
@@ -14,7 +14,7 @@
       {"name": "Thomas Graeber", "link": "https://www.thomasgraeber.com/"},
       {"name": "Chris Roth", "link": "https://sites.google.com/site/chrisrotheconomics/"}
     ],
-    "date": "September 2025",
+    "date": "January 2026",
     "pdf": "LiT.pdf",
     "abstract": "Information often spreads and influences beliefs regardless of its reliability. We show that this occurs in part because indicators of reliability are disproportionately lost in the process of word-of-mouth transmission. We conduct controlled experiments where participants listen to economic forecasts and pass them on through voice messages. Other participants listen either to original or transmitted audio recordings and report incentivized beliefs. Across various transmitter incentive schemes, a claim's reliability is lost in transmission more than twice as much as the claim itself. Reliable and unreliable information, once filtered through transmission, impact listener beliefs similarly, substantially reducing the efficiency of downstream decisions. Mechanism experiments show that reliability is lost not because it is perceived as less relevant or harder to transmit, but because it is less likely to <em>come to mind</em> during transmission. Evidence from experiments, a large corpus of everyday conversations, and economic TV news demonstrate that reliability information is less likely to be cued during transmission and that attempts to retrieve it face greater interference in memory."
   }
