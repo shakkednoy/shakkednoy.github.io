@@ -3,7 +3,7 @@ layout: page
 ---
 
 <div align="center"> 
-  <img src="shakkednoy.jpg" width="20%" /> 
+  <img src="shakked.jpg" width="20%" /> 
 </div>
 
 Hi, I'm Shakked! I'm a third-year PhD student in the Economics Department at MIT, interested in behavioral economics, political economy, and labor economics.

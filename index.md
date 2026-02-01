@@ -2,7 +2,7 @@
 layout: page
 ---
 
-<img src="shakkednoy.jpg" />
+<img src="shakked.jpg" />
 
 Hi, I'm Shakked! I'm a third-year PhD student in the Economics Department at MIT, interested in behavioral economics, political economy, and labor economics.
 
