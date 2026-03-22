@@ -85,14 +85,10 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
         !dateWithItalics.match(/^\w+ \d{4}$/)) { // Not just "Month Year"
       
       // Common journal patterns to italicize
-      dateWithItalics = dateWithItalics
-        .replace(/(Science|Nature|Cell|PNAS)/, '<em>$1</em>')
-        .replace(/(Journal of [^,]+)/, '<em>$1</em>')
-        .replace(/(American Economic Review|Quarterly Journal of Economics|Review of Economic Studies)/, '<em>$1</em>')
-        .replace(/(ILR Review|Economic Journal|European Economic Review)/, '<em>$1</em>')
-        .replace(/(Frontiers in [^,]+)/, '<em>$1</em>')
-        .replace(/(CESifo Working Paper)/, '<em>$1</em>')
-        .replace(/(Essays on Longtermism)/, '<em>$1</em>');
+      dateWithItalics = dateWithItalics.replace(
+        /(Science|Nature|Cell|PNAS|American Economic Review|Quarterly Journal of Economics|Review of Economic Studies|ILR Review|Economic Journal|European Economic Review|Journal of [^,]+|Frontiers in [^,]+|CESifo Working Paper|Essays on Longtermism)/,
+        '<em>$1</em>'
+      );
     }
     
     // Also handle "In [book title]" format
