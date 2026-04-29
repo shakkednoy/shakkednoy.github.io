@@ -2,7 +2,7 @@
 layout: page
 ---
 
-<img src="shakked.jpg" />
+<img src="frog.jpg" />
 
 Hi, I'm Shakked! I'm a third-year PhD student in the Economics Department at MIT, interested in behavioral economics, political economy, and labor economics.
 
@@ -40,7 +40,6 @@ Special issue for the Economic Policy Institute's Unequal Power Series<br/>
 
 [Explaining the Reliability of our Mathematical Beliefs](phil489.pdf)<br/>
 _Philosophy Honors Thesis_, 2019<br/>
-
 
 
 
