@@ -189,10 +189,6 @@ document.addEventListener("DOMContentLoaded", function() {
             <em>Journal of Economic Perspectives</em>, 2022, 36(4), p.53-80
           </div>
           <div style="margin-bottom: 1rem;">
-            <a href="wdcd_ilrr.pdf">What Does Codetermination Do?</a> (with <a href="https://economics.mit.edu/faculty/sjaeger">Simon Jäger</a> and <a href="https://economics.berkeley.edu/faculty/schoefer">Benjamin Schoefer</a>)<br/>
-            <em>ILR Review</em>, 2022, 75(4), p.857-890
-          </div>
-          <div style="margin-bottom: 1rem;">
             <a href="thesis_jeboR2.pdf">The Effects of Neighborhood and Workplace Income Comparisons on Subjective Wellbeing</a> (with <a href="https://motu.nz/about-us/people/isabelle-sin/">Isabelle Sin</a>)<br/>
             <em>Journal of Economic Behavior and Organization</em>, 2021, 185, p.918-945
           </div>
