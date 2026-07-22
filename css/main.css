@@ -33,6 +33,11 @@ h2 {
   letter-spacing: 0.01em;    
 }
 
+.section-heading {
+  border-bottom: 1px solid gray;
+  padding-bottom: 0.25rem;
+}
+
 .no_top_margin {
   margin-block-start: normal;
 }
