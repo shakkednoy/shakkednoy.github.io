@@ -138,62 +138,24 @@ function toggleAbstract(id) {
 
 // Load content when page loads
 document.addEventListener("DOMContentLoaded", function() {
-  // Load working papers
-  fetch('data/working-papers.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok ' + response.statusText);
+  // Load working papers and publications into one research section.
+  Promise.all([
+    fetch('data/working-papers.json'),
+    fetch('data/publications.json')
+  ])
+    .then(responses => {
+      const failedResponse = responses.find(response => !response.ok);
+      if (failedResponse) {
+        throw new Error('Network response was not ok ' + failedResponse.statusText);
       }
-      return response.json();
+      return Promise.all(responses.map(response => response.json()));
     })
-    .then(papers => {
-      populatePapers(papers, 'papersList', false);
-    })
-    .catch(error => {
-      console.error("Fetch error for working-papers.json:", error);
-      // Fallback content if JSON fails to load
-      const fallbackElement = document.getElementById('papersList');
-      if (fallbackElement) {
-        fallbackElement.innerHTML = `
-          <div style="margin-bottom: 1rem;">
-            <a href="LiT.pdf">Lost in Transmission</a> (with <a href="https://www.thomasgraeber.com/">Thomas Graeber</a> and <a href="https://sites.google.com/site/chrisrotheconomics/">Chris Roth</a>)<br/>
-            Last updated: November 2024
-          </div>
-        `;
-      }
-    });
-
-  // Load publications
-  fetch('data/publications.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok ' + response.statusText);
-      }
-      return response.json();
-    })
-    .then(papers => {
-      populatePapers(papers, 'publicationsList', true);
+    .then(([workingPapers, publications]) => {
+      populatePapers([...workingPapers, ...publications], 'researchList');
     })
     .catch(error => {
-      console.error("Fetch error for publications.json:", error);
-      // Fallback content if JSON fails to load
-      const fallbackElement = document.getElementById('publicationsList');
-      if (fallbackElement) {
-        fallbackElement.innerHTML = `
-          <div style="margin-bottom: 1rem;">
-            <a href="Noy%20Zhang%20NBER%20SI.pdf">Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence</a> (with <a href="https://www.whitneyzhang.com/">Whitney Zhang</a>)<br/>
-            <em>Science</em>, 2023, 381(6654), p.187-192
-          </div>
-          <div style="margin-bottom: 1rem;">
-            <a href="jep_germany.pdf">The German Model of Industrial Relations: Balancing Flexibility and Collective Action</a> (with <a href="https://economics.mit.edu/faculty/sjaeger">Simon Jäger</a> and <a href="https://economics.berkeley.edu/faculty/schoefer">Benjamin Schoefer</a>)<br/>
-            <em>Journal of Economic Perspectives</em>, 2022, 36(4), p.53-80
-          </div>
-          <div style="margin-bottom: 1rem;">
-            <a href="thesis_jeboR2.pdf">The Effects of Neighborhood and Workplace Income Comparisons on Subjective Wellbeing</a> (with <a href="https://motu.nz/about-us/people/isabelle-sin/">Isabelle Sin</a>)<br/>
-            <em>Journal of Economic Behavior and Organization</em>, 2021, 185, p.918-945
-          </div>
-        `;
-      }
+      console.error("Fetch error for research data:", error);
+      // Keep the static HTML fallback if either JSON file fails to load.
     });
 
   // Load other research (if container exists)
