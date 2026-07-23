@@ -138,24 +138,36 @@ function toggleAbstract(id) {
 
 // Load content when page loads
 document.addEventListener("DOMContentLoaded", function() {
-  // Load working papers and publications into one research section.
-  Promise.all([
-    fetch('data/working-papers.json'),
-    fetch('data/publications.json')
-  ])
-    .then(responses => {
-      const failedResponse = responses.find(response => !response.ok);
-      if (failedResponse) {
-        throw new Error('Network response was not ok ' + failedResponse.statusText);
+  // Load working papers.
+  fetch('data/working-papers.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
       }
-      return Promise.all(responses.map(response => response.json()));
+      return response.json();
     })
-    .then(([workingPapers, publications]) => {
-      populatePapers([...workingPapers, ...publications], 'researchList');
+    .then(papers => {
+      populatePapers(papers, 'papersList');
     })
     .catch(error => {
-      console.error("Fetch error for research data:", error);
-      // Keep the static HTML fallback if either JSON file fails to load.
+      console.error("Fetch error for working-papers.json:", error);
+      // Keep the static HTML fallback if the JSON file fails to load.
+    });
+
+  // Load publications.
+  fetch('data/publications.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+      }
+      return response.json();
+    })
+    .then(papers => {
+      populatePapers(papers, 'publicationsList');
+    })
+    .catch(error => {
+      console.error("Fetch error for publications.json:", error);
+      // Keep the static HTML fallback if the JSON file fails to load.
     });
 
   // Load other research (if container exists)
