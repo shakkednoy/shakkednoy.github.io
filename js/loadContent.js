@@ -42,13 +42,13 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
       paper.extraLinks.forEach(link => {
         const cleanedText = link.text.replace(/\\|"/g, '').trim();
         
-        const isReplicationArchive = cleanedText.toLowerCase().includes("replication archive");
+        const isReplicationLink = cleanedText.toLowerCase().includes("replication");
         const isSurveyInstruments = cleanedText.toLowerCase().includes("survey");
-        const icon = isReplicationArchive ? replicationArchiveIcon : 
+        const icon = isReplicationLink ? replicationArchiveIcon :
                      isSurveyInstruments ? surveyInstrumentsIcon : 
                      documentIcon;
         
-        extraLinksHTML += `<a href="${link.url}" class="graylinks">${icon} ${isReplicationArchive ? '&nbsp;' : ''}${link.text}</a>`;
+        extraLinksHTML += `<a href="${link.url}" class="graylinks">${icon} ${isReplicationLink ? '&nbsp;' : ''}${link.text}</a>`;
       });
     }
 
@@ -56,14 +56,15 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
     const abstractId = `ab-${paperSlug}`;
     const pressCoverageId = `press-${paperSlug}`;
 
-    let pressCoverageHTML = '';
+    let pressCoverageToggleHTML = '';
+    let pressCoverageListHTML = '';
     if (paper.pressCoverage && paper.pressCoverage.length > 0) {
       const coverageLinks = paper.pressCoverage
         .map(coverage => `<li><a href="${coverage.url}">${coverage.source}</a></li>`)
         .join('');
 
-      pressCoverageHTML = `
-        <a onclick="toggleExpandable('${pressCoverageId}', event)" class="graylinks press-coverage-toggle">${plusIcon} Press coverage</a>
+      pressCoverageToggleHTML = `<a onclick="toggleExpandable('${pressCoverageId}', event)" class="graylinks press-coverage-toggle">${plusIcon} Press coverage</a>`;
+      pressCoverageListHTML = `
         <ul id="${pressCoverageId}" class="expandable-hide press-coverage-list">
           ${coverageLinks}
         </ul>
@@ -123,8 +124,9 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
     html += `
       <ul style="position: relative; left: -40px;">
         <a onclick="toggleExpandable('${abstractId}', event)" class="graylinks abstract-toggle">${plusIcon} Abstract</a>
-        ${pressCoverageHTML}
+        ${pressCoverageToggleHTML}
         ${extraLinksHTML}
+        ${pressCoverageListHTML}
         <p id="${abstractId}" class="expandable-hide abstract-content">
           ${paper.abstract}
         </p>
