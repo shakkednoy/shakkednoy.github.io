@@ -63,9 +63,9 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
         .map(coverage => `<li><a href="${coverage.url}">${coverage.source}</a></li>`)
         .join('');
 
-      pressCoverageToggleHTML = `<a onclick="toggleExpandable('${pressCoverageId}', event)" class="graylinks press-coverage-toggle">${plusIcon} Press coverage</a>`;
+      pressCoverageToggleHTML = `<a onclick="toggleExpandable('${pressCoverageId}', event)" class="graylinks press-coverage-toggle" data-expandable-target="${pressCoverageId}" aria-controls="${pressCoverageId}" aria-expanded="false">${plusIcon} Press coverage</a>`;
       pressCoverageListHTML = `
-        <ul id="${pressCoverageId}" class="expandable-hide press-coverage-list">
+        <ul id="${pressCoverageId}" class="expandable-hide press-coverage-list" data-expandable-group="${paperSlug}">
           ${coverageLinks}
         </ul>
       `;
@@ -123,11 +123,11 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
     
     html += `
       <ul style="position: relative; left: -40px;">
-        <a onclick="toggleExpandable('${abstractId}', event)" class="graylinks abstract-toggle">${plusIcon} Abstract</a>
+        <a onclick="toggleExpandable('${abstractId}', event)" class="graylinks abstract-toggle" data-expandable-target="${abstractId}" aria-controls="${abstractId}" aria-expanded="false">${plusIcon} Abstract</a>
         ${pressCoverageToggleHTML}
         ${extraLinksHTML}
         ${pressCoverageListHTML}
-        <p id="${abstractId}" class="expandable-hide abstract-content">
+        <p id="${abstractId}" class="expandable-hide abstract-content" data-expandable-group="${paperSlug}">
           ${paper.abstract}
         </p>
       </ul>
@@ -141,18 +141,32 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
 function toggleExpandable(id, clickEvent) {
   const content = document.getElementById(id);
   if (!content) return;
-  
-  const toggleIcon = clickEvent.currentTarget.querySelector('.toggle-icon');
-  
-  if (content.classList.contains('expandable-hide')) {
-    content.classList.remove('expandable-hide');
-    content.classList.add('expandable-show');
-    if (toggleIcon) toggleIcon.textContent = '−';
-  } else {
-    content.classList.remove('expandable-show');
-    content.classList.add('expandable-hide');
-    if (toggleIcon) toggleIcon.textContent = '+';
+
+  const trigger = clickEvent.currentTarget;
+  const isOpening = content.classList.contains('expandable-hide');
+
+  if (isOpening) {
+    const group = content.dataset.expandableGroup;
+    const openSibling = Array.from(document.querySelectorAll('.expandable-show[data-expandable-group]'))
+      .find(element => element !== content && element.dataset.expandableGroup === group);
+
+    if (openSibling) {
+      const siblingTrigger = Array.from(document.querySelectorAll('[data-expandable-target]'))
+        .find(element => element.dataset.expandableTarget === openSibling.id);
+      setExpandableState(openSibling, siblingTrigger, false);
+    }
   }
+
+  setExpandableState(content, trigger, isOpening);
+}
+
+function setExpandableState(content, trigger, isOpen) {
+  content.classList.toggle('expandable-hide', !isOpen);
+  content.classList.toggle('expandable-show', isOpen);
+
+  const toggleIcon = trigger?.querySelector('.toggle-icon');
+  if (toggleIcon) toggleIcon.textContent = isOpen ? '−' : '+';
+  if (trigger) trigger.setAttribute('aria-expanded', String(isOpen));
 }
 
 // Load content when page loads
