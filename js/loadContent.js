@@ -51,6 +51,24 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
         extraLinksHTML += `<a href="${link.url}" class="graylinks">${icon} ${isReplicationArchive ? '&nbsp;' : ''}${link.text}</a>`;
       });
     }
+
+    const paperSlug = paper.title.replace(/\s+/g, '-').replace(/[^\w-]/g, '').toLowerCase();
+    const abstractId = `ab-${paperSlug}`;
+    const pressCoverageId = `press-${paperSlug}`;
+
+    let pressCoverageHTML = '';
+    if (paper.pressCoverage && paper.pressCoverage.length > 0) {
+      const coverageLinks = paper.pressCoverage
+        .map(coverage => `<li><a href="${coverage.url}">${coverage.source}</a></li>`)
+        .join('');
+
+      pressCoverageHTML = `
+        <a onclick="toggleExpandable('${pressCoverageId}', event)" class="graylinks press-coverage-toggle">${plusIcon} Press coverage</a>
+        <ul id="${pressCoverageId}" class="expandable-hide press-coverage-list">
+          ${coverageLinks}
+        </ul>
+      `;
+    }
     
     function formatAuthor(author) {
       const suffix = author.suffix || '';
@@ -102,13 +120,12 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
       html += ` ${paper.appendedText}`;
     }
     
-    const abstractId = `ab-${paper.title.replace(/\s+/g, '-').replace(/[^\w-]/g, '').toLowerCase()}`;
-    
     html += `
       <ul style="position: relative; left: -40px;">
-        <a onclick="toggleAbstract('${abstractId}')" class="graylinks abstract-toggle">${plusIcon} Abstract</a>
+        <a onclick="toggleExpandable('${abstractId}', event)" class="graylinks abstract-toggle">${plusIcon} Abstract</a>
+        ${pressCoverageHTML}
         ${extraLinksHTML}
-        <p id="${abstractId}" class="abstract-hide">
+        <p id="${abstractId}" class="expandable-hide abstract-content">
           ${paper.abstract}
         </p>
       </ul>
@@ -119,19 +136,19 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
   });
 }
 
-function toggleAbstract(id) {
-  const abstract = document.getElementById(id);
-  if (!abstract) return;
+function toggleExpandable(id, clickEvent) {
+  const content = document.getElementById(id);
+  if (!content) return;
   
-  const toggleIcon = event.currentTarget.querySelector('.toggle-icon');
+  const toggleIcon = clickEvent.currentTarget.querySelector('.toggle-icon');
   
-  if (abstract.classList.contains('abstract-hide')) {
-    abstract.classList.remove('abstract-hide');
-    abstract.classList.add('abstract-show');
+  if (content.classList.contains('expandable-hide')) {
+    content.classList.remove('expandable-hide');
+    content.classList.add('expandable-show');
     if (toggleIcon) toggleIcon.textContent = '−';
   } else {
-    abstract.classList.remove('abstract-show');
-    abstract.classList.add('abstract-hide');
+    content.classList.remove('expandable-show');
+    content.classList.add('expandable-hide');
     if (toggleIcon) toggleIcon.textContent = '+';
   }
 }

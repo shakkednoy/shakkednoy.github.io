@@ -120,8 +120,15 @@ a:hover {
   text-decoration: none;
 }
 
-.abstract-show {
-  display: block; 
+.expandable-hide {
+  display: none;
+}
+
+.expandable-show {
+  display: block;
+}
+
+.abstract-content {
   color: black;
   margin-top: 0px;
   background-color: white; 
@@ -133,16 +140,14 @@ a:hover {
   line-height: 140%;
 }
 
-.abstract-hide {
-  display: none; 
-  color: black;
-  background-color: white; 
-  text-decoration: none;
-  padding: 5px;
-  margin-left: 20px;
-  white-space: nowrap; 
-  border-radius: 35px;
-  line-height: 140%;
+.press-coverage-list {
+  margin: 0 0 0 40px;
+  padding: 2px 0 2px 20px;
+  line-height: 1.6;
+}
+
+.press-coverage-list li {
+  padding-left: 0;
 }
 
 /* Contact links styling */

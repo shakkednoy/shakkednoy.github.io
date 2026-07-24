@@ -7,6 +7,36 @@
     "date": "Science, 2023, 381(6654), p.187-192",
     "pdf": "Noy%20Zhang%20NBER%20SI.pdf",
     "abstract": "We examined the productivity effects of a generative artificial intelligence technology—the assistive chatbot ChatGPT—in the context of mid-level professional writing tasks. In a preregistered online experiment, we assigned occupation-specific, incentivized writing tasks to 453 college-educated professionals, and randomly exposed half of them to ChatGPT. Our results show that ChatGPT substantially raised productivity: average time taken decreased by 40% and output quality rose by 18%. Inequality between workers decreased, and concern and excitement about AI temporarily rose. Workers exposed to ChatGPT during the experiment were 2x as likely to report using it in their real job two weeks after the experiment, and 1.6x as likely two months after the experiment.",
+    "pressCoverage": [
+      {
+        "source": "The Economist",
+        "url": "https://www.economist.com/finance-and-economics/2023/11/16/what-will-artificial-intelligence-mean-for-your-pay?frsc=dg%7Ce"
+      },
+      {
+        "source": "New York Times (1)",
+        "url": "https://www.nytimes.com/2023/03/28/business/economy/jobs-ai-artificial-intelligence-chatgpt.html"
+      },
+      {
+        "source": "New York Times (2)",
+        "url": "https://www.nytimes.com/2023/05/28/opinion/artificial-intelligence-thinking-minds-concentration.html"
+      },
+      {
+        "source": "Wall Street Journal",
+        "url": "https://www.wsj.com/articles/the-jobs-most-exposed-to-chatgpt-e7ceebf0?st=ynw290f4ao9er6i&reflink=desktopwebshare_permalink"
+      },
+      {
+        "source": "Financial Times",
+        "url": "https://www.ft.com/content/74c63f77-f543-4be0-9cd9-2f5f40ba6f17?syn-25a6b1a6=1"
+      },
+      {
+        "source": "Vox",
+        "url": "https://www.vox.com/future-perfect/2023/3/14/23637633/chatgpt-bing-generative-ai-ethan-lilach-mollick"
+      },
+      {
+        "source": "MarginalRevolution",
+        "url": "https://marginalrevolution.com/marginalrevolution/2023/07/shakked-noy-and-whitney-zhang-on-the-productivity-effects-of-llms.html"
+      }
+    ],
     "extraLinks": [
       {
         "text": "Online Appendix",
