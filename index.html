@@ -28,6 +28,13 @@
         text-decoration: underline;
       }
     </style>
+    <noscript>
+      <style>
+        .content-loading {
+          visibility: visible;
+        }
+      </style>
+    </noscript>
   </head> 
 
   <body> 
@@ -66,14 +73,14 @@
       <div class="block" id="right">
         <!-- Working Papers Section -->
         <h2 class="no_top_margin">Working Papers</h2>
-        <div id="papersList">
+        <div id="papersList" class="content-loading" aria-busy="true">
           <!-- Fallback content -->
           <div style="margin-bottom: 1rem;">
             <a href="https://www.dropbox.com/scl/fi/27v4xxenpo8wotkw1238e/rao-jmp.pdf?rlkey=x8rg0slqo9mwfhdlbqgftaw4b&amp;e=1&amp;dl=0">The Business of the Culture War</a>, with <a href="https://aakaashrao.github.io/">Aakaash Rao</a><br/>
             July 2026
           </div>
           <div style="margin-bottom: 1rem;">
-            <a href="LiT.pdf">Lost in Transmission</a> (with <a href="https://www.thomasgraeber.com/">Thomas Graeber</a> and <a href="https://sites.google.com/site/chrisrotheconomics/">Chris Roth</a>)<br/>
+            <a href="LiT.pdf">The Transmission of Reliable and Unreliable Information</a> (with <a href="https://www.thomasgraeber.com/">Thomas Graeber</a> and <a href="https://sites.google.com/site/chrisrotheconomics/">Chris Roth</a>)<br/>
             July 2026; accepted, <em>Quarterly Journal of Economics</em>
           </div>
         </div>
@@ -81,7 +88,7 @@
 
         <!-- Publications Section -->
         <h2 class="bottom-three">Publications</h2>
-        <div id="publicationsList">
+        <div id="publicationsList" class="content-loading" aria-busy="true">
           <!-- Fallback content -->
           <div style="margin-bottom: 1rem;">
             <a href="Noy%20Zhang%20NBER%20SI.pdf">Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence</a> (with <a href="https://www.whitneyzhang.com/">Whitney Zhang</a>)<br/>
@@ -100,12 +107,11 @@
 
         <!-- Other Writing Section -->
         <h2 class="bottom-three">Other Writing</h2>
-        <div id="otherResearchList">
+        <div id="otherResearchList" class="content-loading" aria-busy="true">
           <!-- Fallback content - will be replaced by JavaScript if JSON loads successfully -->
           <div style="margin-bottom: 1rem;">
-            <a href="longtermism.pdf">The Short-Termism of 'Hard' Economics</a> (with Ilan Noy)<br/>
-            <em>CESifo Working Paper</em>, 2022<br/>
-            Invited for a volume of essays about longtermism, to be published by Oxford University Press in 2024<br/>
+            <a href="longtermism.pdf">The Short-Termism of 'Hard' Economics</a> (with <a href="https://sites.google.com/view/ilannoy">Ilan Noy</a>)<br/>
+            In <em>Essays on Longtermism</em>, 2025, Oxford University Press, eds. Hilary Greaves, Jacob Barrett, and David Thorstad
           </div>
 
           <div style="margin-bottom: 1rem;">
@@ -128,6 +134,6 @@
     </div>
 
     <!-- JavaScript for dynamic content loading -->
-    <script src="js/loadContent.js"></script>
+    <script src="js/loadContent.js" onerror="document.querySelectorAll('.content-loading').forEach(function (element) { element.classList.remove('content-loading'); element.setAttribute('aria-busy', 'false'); });"></script>
   </body>
 </html>

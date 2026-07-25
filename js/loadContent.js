@@ -169,6 +169,14 @@ function setExpandableState(content, trigger, isOpen) {
   if (trigger) trigger.setAttribute('aria-expanded', String(isOpen));
 }
 
+function revealContent(containerID) {
+  const container = document.getElementById(containerID);
+  if (!container) return;
+
+  container.classList.remove('content-loading');
+  container.setAttribute('aria-busy', 'false');
+}
+
 // Load content when page loads
 document.addEventListener("DOMContentLoaded", function() {
   // Load working papers.
@@ -185,7 +193,8 @@ document.addEventListener("DOMContentLoaded", function() {
     .catch(error => {
       console.error("Fetch error for working-papers.json:", error);
       // Keep the static HTML fallback if the JSON file fails to load.
-    });
+    })
+    .finally(() => revealContent('papersList'));
 
   // Load publications.
   fetch('data/publications.json')
@@ -201,7 +210,8 @@ document.addEventListener("DOMContentLoaded", function() {
     .catch(error => {
       console.error("Fetch error for publications.json:", error);
       // Keep the static HTML fallback if the JSON file fails to load.
-    });
+    })
+    .finally(() => revealContent('publicationsList'));
 
   // Load other research (if container exists)
   const otherResearchContainer = document.getElementById('otherResearchList');
@@ -219,6 +229,7 @@ document.addEventListener("DOMContentLoaded", function() {
       .catch(error => {
         console.error("Fetch error for other-research.json:", error);
         // Keep the static HTML fallback if JSON fails
-      });
+      })
+      .finally(() => revealContent('otherResearchList'));
   }
 });
