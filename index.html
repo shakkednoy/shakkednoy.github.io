@@ -137,6 +137,15 @@
     </div>
 
     <!-- JavaScript for dynamic content loading -->
-    <script src="js/loadContent.js" onerror="document.querySelectorAll('.content-loading').forEach(function (element) { element.classList.remove('content-loading'); element.setAttribute('aria-busy', 'false'); });"></script>
+    <script>
+      // Never leave fallback content hidden if the loader is stale, blocked, or fails unexpectedly.
+      window.setTimeout(function () {
+        document.querySelectorAll('.content-loading').forEach(function (element) {
+          element.classList.remove('content-loading');
+          element.setAttribute('aria-busy', 'false');
+        });
+      }, 3000);
+    </script>
+    <script src="js/loadContent.js?v=20260830-1" onerror="document.querySelectorAll('.content-loading').forEach(function (element) { element.classList.remove('content-loading'); element.setAttribute('aria-busy', 'false'); });"></script>
   </body>
 </html>
