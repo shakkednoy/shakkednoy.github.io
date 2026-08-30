@@ -89,33 +89,37 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
       }
     }
     
-    let html = `<a href="${paper.pdf}">${paper.title}</a>`;
+    let html = paper.pdf
+      ? `<a href="${paper.pdf}">${paper.title}</a>`
+      : `<span class="paper-title">${paper.title}</span>`;
     
     if (authorsHTML) {
       html += `, with ${authorsHTML}`;
     }
     
-    // Parse the date to italicize only journal names
-    let dateWithItalics = paper.date;
-    
-    // Only italicize if it contains a journal name (not just years or "Working Paper" etc)
-    if (!dateWithItalics.includes('Working Paper') && 
-        !dateWithItalics.includes('Thesis') && 
-        !dateWithItalics.match(/^\w+ \d{4}$/)) { // Not just "Month Year"
-      
-      // Common journal patterns to italicize
-      dateWithItalics = dateWithItalics.replace(
-        /(Science|Nature|Cell|PNAS|American Economic Review|Quarterly Journal of Economics|Review of Economic Studies|ILR Review|Economic Journal|European Economic Review|Journal of [^,]+|Frontiers in [^,]+|CESifo Working Paper|Essays on Longtermism)/,
-        '<em>$1</em>'
-      );
+    if (paper.date) {
+      // Parse the date to italicize only journal names.
+      let dateWithItalics = paper.date;
+
+      // Only italicize if it contains a journal name (not just years or "Working Paper" etc).
+      if (!dateWithItalics.includes('Working Paper') &&
+          !dateWithItalics.includes('Thesis') &&
+          !dateWithItalics.match(/^\w+ \d{4}$/)) { // Not just "Month Year"
+
+        // Common journal patterns to italicize.
+        dateWithItalics = dateWithItalics.replace(
+          /(Science|Nature|Cell|PNAS|American Economic Review|Quarterly Journal of Economics|Review of Economic Studies|ILR Review|Economic Journal|European Economic Review|Journal of [^,]+|Frontiers in [^,]+|CESifo Working Paper|Essays on Longtermism)/,
+          '<em>$1</em>'
+        );
+      }
+
+      // Also handle "In [book title]" format.
+      if (dateWithItalics.startsWith('In ')) {
+        dateWithItalics = dateWithItalics.replace(/In ([^,]+),/, 'In <em>$1</em>,');
+      }
+
+      html += `<br>${dateWithItalics}`;
     }
-    
-    // Also handle "In [book title]" format
-    if (dateWithItalics.startsWith('In ')) {
-      dateWithItalics = dateWithItalics.replace(/In ([^,]+),/, 'In <em>$1</em>,');
-    }
-    
-    html += `<br>${dateWithItalics}`;
     
     if (paper.appendedText) {
       html += ` ${paper.appendedText}`;
@@ -179,8 +183,8 @@ function revealContent(containerID) {
 
 // Load content when page loads
 document.addEventListener("DOMContentLoaded", function() {
-  // Load working papers.
-  fetch('data/working-papers.json')
+  // Load the job market paper.
+  fetch('data/job-market-paper.json')
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok ' + response.statusText);
@@ -188,30 +192,34 @@ document.addEventListener("DOMContentLoaded", function() {
       return response.json();
     })
     .then(papers => {
-      populatePapers(papers, 'papersList');
+      populatePapers(papers, 'jobMarketPaperList');
     })
     .catch(error => {
-      console.error("Fetch error for working-papers.json:", error);
+      console.error("Fetch error for job-market-paper.json:", error);
       // Keep the static HTML fallback if the JSON file fails to load.
     })
-    .finally(() => revealContent('papersList'));
+    .finally(() => revealContent('jobMarketPaperList'));
 
-  // Load publications.
-  fetch('data/publications.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok ' + response.statusText);
+  // Load working papers and publications into one research section.
+  Promise.all([
+    fetch('data/working-papers.json'),
+    fetch('data/publications.json')
+  ])
+    .then(responses => {
+      const failedResponse = responses.find(response => !response.ok);
+      if (failedResponse) {
+        throw new Error('Network response was not ok ' + failedResponse.statusText);
       }
-      return response.json();
+      return Promise.all(responses.map(response => response.json()));
     })
-    .then(papers => {
-      populatePapers(papers, 'publicationsList');
+    .then(([workingPapers, publications]) => {
+      populatePapers([...workingPapers, ...publications], 'researchList');
     })
     .catch(error => {
-      console.error("Fetch error for publications.json:", error);
-      // Keep the static HTML fallback if the JSON file fails to load.
+      console.error("Fetch error for research data:", error);
+      // Keep the static HTML fallback if either JSON file fails to load.
     })
-    .finally(() => revealContent('publicationsList'));
+    .finally(() => revealContent('researchList'));
 
   // Load other research (if container exists)
   const otherResearchContainer = document.getElementById('otherResearchList');
