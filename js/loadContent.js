@@ -73,7 +73,7 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
     
     function formatAuthor(author) {
       const suffix = author.suffix || '';
-      return '<a href="' + author.link + '">' + author.name + '</a>' + suffix;
+      return '<a href="' + author.link + '" target="_blank" rel="noopener noreferrer">' + author.name + '</a>' + suffix;
     }
 
     let authorsHTML = '';

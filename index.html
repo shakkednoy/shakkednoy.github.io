@@ -11,7 +11,7 @@
     <title>Shakked Noy</title>
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="css/main.css"> 
+    <link rel="stylesheet" type="text/css" href="css/main.css?v=20260923-1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     
     <!-- Favicon (using existing Jekyll favicon if available) -->
@@ -49,19 +49,31 @@
         
         <!-- Contact information -->
         <div class="contact-links">
-          <a href="mailto:snoy@mit.edu" onmouseover="this.querySelector('.email-text').style.textDecoration='underline'" onmouseout="this.querySelector('.email-text').style.textDecoration='none'">
-            <span class="email-icon">&#9997;&#xFE0E;</span>
-            <span class="email-text" style="text-decoration-thickness: 2px;">snoy@mit.edu</span>
+          <a href="mailto:snoy@mit.edu">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <rect width="18" height="14" x="3" y="5" rx="2"></rect>
+              <path d="m3 7 9 6 9-6"></path>
+            </svg>
+            <span class="contact-text">snoy@mit.edu</span>
           </a>
 
-          <a id="special-cv-link" class="graylinks cv-link" href="cv.pdf">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="slategray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+          <a id="special-cv-link" href="cv.pdf">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
               <path d="M6 2H14L20 8V22H6V2Z"></path>
               <path d="M14 2V8H20"></path>
               <line x1="10" y1="12" x2="16" y2="12"></line>
               <line x1="10" y1="16" x2="16" y2="16"></line>
             </svg>
-            <span>CV</span>
+            <span class="contact-text">CV</span>
+          </a>
+
+          <a href="https://scholar.google.com/citations?user=kRV3tJkAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M22 10 12 5 2 10l10 5 10-5Z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              <path d="M22 10v6"></path>
+            </svg>
+            <span class="contact-text">Google Scholar</span>
           </a>
         </div>
         
@@ -76,7 +88,7 @@
         <div id="jobMarketPaperList" class="content-loading" aria-busy="true">
           <!-- Fallback content -->
           <div style="margin-bottom: 1rem;">
-            The Supply Side of Social Media, with <a href="https://aakaashrao.github.io/">Aakaash Rao</a>
+            The Supply Side of Social Media, with <a href="https://aakaashrao.github.io/" target="_blank" rel="noopener noreferrer">Aakaash Rao</a>
           </div>
         </div>
         <hr style="border: 0; height: 1px; background-color: gray;">
@@ -86,23 +98,23 @@
         <div id="researchList" class="content-loading" aria-busy="true">
           <!-- Fallback content -->
           <div style="margin-bottom: 1rem;">
-            <a href="https://www.dropbox.com/scl/fi/27v4xxenpo8wotkw1238e/rao-jmp.pdf?rlkey=x8rg0slqo9mwfhdlbqgftaw4b&amp;e=1&amp;dl=0">The Business of the Culture War</a>, with <a href="https://aakaashrao.github.io/">Aakaash Rao</a><br/>
+            <a href="https://www.dropbox.com/scl/fi/27v4xxenpo8wotkw1238e/rao-jmp.pdf?rlkey=x8rg0slqo9mwfhdlbqgftaw4b&amp;e=1&amp;dl=0">The Business of the Culture War</a>, with <a href="https://aakaashrao.github.io/" target="_blank" rel="noopener noreferrer">Aakaash Rao</a><br/>
             July 2026
           </div>
           <div style="margin-bottom: 1rem;">
-            <a href="LiT.pdf">The Transmission of Reliable and Unreliable Information</a> (with <a href="https://www.thomasgraeber.com/">Thomas Graeber</a> and <a href="https://sites.google.com/site/chrisrotheconomics/">Chris Roth</a>)<br/>
+            <a href="LiT.pdf">The Transmission of Reliable and Unreliable Information</a> (with <a href="https://www.thomasgraeber.com/" target="_blank" rel="noopener noreferrer">Thomas Graeber</a> and <a href="https://sites.google.com/site/chrisrotheconomics/" target="_blank" rel="noopener noreferrer">Chris Roth</a>)<br/>
             July 2026; accepted, <em>Quarterly Journal of Economics</em>
           </div>
           <div style="margin-bottom: 1rem;">
-            <a href="Noy%20Zhang%20NBER%20SI.pdf">Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence</a> (with <a href="https://www.whitneyzhang.com/">Whitney Zhang</a>)<br/>
+            <a href="Noy%20Zhang%20NBER%20SI.pdf">Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence</a> (with <a href="https://www.whitneyzhang.com/" target="_blank" rel="noopener noreferrer">Whitney Zhang</a>)<br/>
             <em>Science</em>, 2023, 381(6654), p.187-192
           </div>
           <div style="margin-bottom: 1rem;">
-            <a href="jep_germany.pdf">The German Model of Industrial Relations: Balancing Flexibility and Collective Action</a> (with <a href="https://economics.mit.edu/faculty/sjaeger">Simon Jäger</a> and <a href="https://economics.berkeley.edu/faculty/schoefer">Benjamin Schoefer</a>)<br/>
+            <a href="jep_germany.pdf">The German Model of Industrial Relations: Balancing Flexibility and Collective Action</a> (with <a href="https://economics.mit.edu/faculty/sjaeger" target="_blank" rel="noopener noreferrer">Simon Jäger</a> and <a href="https://economics.berkeley.edu/faculty/schoefer" target="_blank" rel="noopener noreferrer">Benjamin Schoefer</a>)<br/>
             <em>Journal of Economic Perspectives</em>, 2022, 36(4), p.53-80
           </div>
           <div style="margin-bottom: 1rem;">
-            <a href="thesis_jeboR2.pdf">The Effects of Neighborhood and Workplace Income Comparisons on Subjective Wellbeing</a> (with <a href="https://motu.nz/about-us/people/isabelle-sin/">Isabelle Sin</a>)<br/>
+            <a href="thesis_jeboR2.pdf">The Effects of Neighborhood and Workplace Income Comparisons on Subjective Wellbeing</a> (with <a href="https://motu.nz/about-us/people/isabelle-sin/" target="_blank" rel="noopener noreferrer">Isabelle Sin</a>)<br/>
             <em>Journal of Economic Behavior and Organization</em>, 2021, 185, p.918-945
           </div>
         </div>
@@ -113,17 +125,17 @@
         <div id="otherResearchList" class="content-loading" aria-busy="true">
           <!-- Fallback content - will be replaced by JavaScript if JSON loads successfully -->
           <div style="margin-bottom: 1rem;">
-            <a href="longtermism.pdf">The Short-Termism of 'Hard' Economics</a> (with <a href="https://sites.google.com/view/ilannoy">Ilan Noy</a>)<br/>
+            <a href="longtermism.pdf">The Short-Termism of 'Hard' Economics</a> (with <a href="https://sites.google.com/view/ilannoy" target="_blank" rel="noopener noreferrer">Ilan Noy</a>)<br/>
             In <em>Essays on Longtermism</em>, 2025, Oxford University Press, eds. Hilary Greaves, Jacob Barrett, and David Thorstad
           </div>
 
           <div style="margin-bottom: 1rem;">
-            <a href="wdcd_ilrr.pdf">What Does Codetermination Do?</a> (with <a href="https://economics.mit.edu/faculty/sjaeger">Simon Jäger</a> and <a href="https://economics.berkeley.edu/faculty/schoefer">Benjamin Schoefer</a>)<br/>
+            <a href="wdcd_ilrr.pdf">What Does Codetermination Do?</a> (with <a href="https://economics.mit.edu/faculty/sjaeger" target="_blank" rel="noopener noreferrer">Simon Jäger</a> and <a href="https://economics.berkeley.edu/faculty/schoefer" target="_blank" rel="noopener noreferrer">Benjamin Schoefer</a>)<br/>
             <em>ILR Review</em>, 2022, 75(4), p.857-890
           </div>
 
           <div style="margin-bottom: 1rem;">
-            <a href="epi_21.pdf">Codetermination and Power in the Workplace</a> (with <a href="https://economics.mit.edu/faculty/sjaeger">Simon Jäger</a> and <a href="https://economics.berkeley.edu/faculty/schoefer">Benjamin Schoefer</a>)<br/>
+            <a href="epi_21.pdf">Codetermination and Power in the Workplace</a> (with <a href="https://economics.mit.edu/faculty/sjaeger" target="_blank" rel="noopener noreferrer">Simon Jäger</a> and <a href="https://economics.berkeley.edu/faculty/schoefer" target="_blank" rel="noopener noreferrer">Benjamin Schoefer</a>)<br/>
             <em>Journal of Law and Political Economy</em>, 2022, 3(1)<br/>
             Special issue for the Economic Policy Institute's Unequal Power Series<br/>
           </div>
@@ -146,6 +158,6 @@
         });
       }, 3000);
     </script>
-    <script src="js/loadContent.js?v=20260830-1" onerror="document.querySelectorAll('.content-loading').forEach(function (element) { element.classList.remove('content-loading'); element.setAttribute('aria-busy', 'false'); });"></script>
+    <script src="js/loadContent.js?v=20260923-1" onerror="document.querySelectorAll('.content-loading').forEach(function (element) { element.classList.remove('content-loading'); element.setAttribute('aria-busy', 'false'); });"></script>
   </body>
 </html>
