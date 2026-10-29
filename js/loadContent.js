@@ -63,7 +63,7 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
         .map(coverage => `<li><a href="${coverage.url}" target="_blank" rel="noopener noreferrer">${coverage.source}</a></li>`)
         .join('');
 
-      pressCoverageToggleHTML = `<a onclick="toggleExpandable('${pressCoverageId}', event)" class="graylinks press-coverage-toggle" data-expandable-target="${pressCoverageId}" aria-controls="${pressCoverageId}" aria-expanded="false">${plusIcon} Press coverage</a>`;
+      pressCoverageToggleHTML = `<a onclick="toggleExpandable('${pressCoverageId}', event)" class="graylinks press-coverage-toggle" data-expandable-target="${pressCoverageId}" aria-controls="${pressCoverageId}" aria-expanded="false">${plusIcon} Press Coverage</a>`;
       pressCoverageListHTML = `
         <ul id="${pressCoverageId}" class="expandable-hide press-coverage-list" data-expandable-group="${paperSlug}">
           ${coverageLinks}
