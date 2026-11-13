@@ -1,3 +1,11 @@
+function escapeAttribute(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
 function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
   if (addPeriodBeforeDate === undefined) {
     addPeriodBeforeDate = true;
@@ -48,7 +56,7 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
                      isSurveyInstruments ? surveyInstrumentsIcon : 
                      documentIcon;
         
-        extraLinksHTML += `<a href="${link.url}" class="graylinks">${icon} ${isReplicationLink ? '&nbsp;' : ''}${link.text}</a>`;
+        extraLinksHTML += `<a href="${link.url}" class="graylinks" data-track="${escapeAttribute(cleanedText + ': ' + paper.title)}">${icon} ${isReplicationLink ? '&nbsp;' : ''}${link.text}</a>`;
       });
     }
 
@@ -60,10 +68,10 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
     let pressCoverageListHTML = '';
     if (paper.pressCoverage && paper.pressCoverage.length > 0) {
       const coverageLinks = paper.pressCoverage
-        .map(coverage => `<li><a href="${coverage.url}" target="_blank" rel="noopener noreferrer">${coverage.source}</a></li>`)
+        .map(coverage => `<li><a href="${coverage.url}" target="_blank" rel="noopener noreferrer" data-track="${escapeAttribute('Press article: ' + paper.title)}">${coverage.source}</a></li>`)
         .join('');
 
-      pressCoverageToggleHTML = `<a onclick="toggleExpandable('${pressCoverageId}', event)" class="graylinks press-coverage-toggle" data-expandable-target="${pressCoverageId}" aria-controls="${pressCoverageId}" aria-expanded="false">${plusIcon} Press Coverage</a>`;
+      pressCoverageToggleHTML = `<a onclick="toggleExpandable('${pressCoverageId}', event)" class="graylinks press-coverage-toggle" data-track="${escapeAttribute('Press Coverage: ' + paper.title)}" data-expandable-target="${pressCoverageId}" aria-controls="${pressCoverageId}" aria-expanded="false">${plusIcon} Press Coverage</a>`;
       pressCoverageListHTML = `
         <ul id="${pressCoverageId}" class="expandable-hide press-coverage-list" data-expandable-group="${paperSlug}">
           ${coverageLinks}
@@ -90,7 +98,7 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
     }
     
     let html = paper.pdf
-      ? `<a href="${paper.pdf}">${paper.title}</a>`
+      ? `<a href="${paper.pdf}" data-track="${escapeAttribute('PDF: ' + paper.title)}">${paper.title}</a>`
       : `<span class="paper-title">${paper.title}</span>`;
     
     if (authorsHTML) {
@@ -127,7 +135,7 @@ function populatePapers(jsonList, containerID, addPeriodBeforeDate) {
     
     html += `
       <ul style="position: relative; left: -40px;">
-        <a onclick="toggleExpandable('${abstractId}', event)" class="graylinks abstract-toggle" data-expandable-target="${abstractId}" aria-controls="${abstractId}" aria-expanded="false">${plusIcon} Abstract</a>
+        <a onclick="toggleExpandable('${abstractId}', event)" class="graylinks abstract-toggle" data-track="${escapeAttribute('Abstract: ' + paper.title)}" data-expandable-target="${abstractId}" aria-controls="${abstractId}" aria-expanded="false">${plusIcon} Abstract</a>
         ${pressCoverageToggleHTML}
         ${extraLinksHTML}
         ${pressCoverageListHTML}
@@ -180,6 +188,33 @@ function revealContent(containerID) {
   container.classList.remove('content-loading');
   container.setAttribute('aria-busy', 'false');
 }
+
+// Click counting with GoatCounter. count.js (loaded in index.html) counts page
+// views; this sends each link click as a named event, e.g. "PDF: <paper title>".
+function trackLinkClick(event) {
+  const link = event.target.closest('a');
+  if (!link || !window.goatcounter || typeof window.goatcounter.count !== 'function') return;
+
+  // Middle-click opens a link in a new tab; ignore right-clicks.
+  if (event.type === 'auxclick' && (event.button !== 1 || !link.getAttribute('href'))) return;
+
+  // Count abstract and press toggles only when they open.
+  if (link.getAttribute('aria-expanded') === 'false') return;
+
+  const href = link.getAttribute('href') ? link.href : '';
+  const text = link.textContent.replace(/\s+/g, ' ').trim();
+  let name = link.dataset.track;
+  if (!name) {
+    if (href.startsWith('mailto:')) name = 'Email';
+    else if (/\.pdf$/i.test(link.pathname || '')) name = `PDF: ${text}`;
+    else name = `Link: ${text || href}`;
+  }
+
+  window.goatcounter.count({ path: name, title: href || name, event: true });
+}
+
+document.addEventListener('click', trackLinkClick);
+document.addEventListener('auxclick', trackLinkClick);
 
 // Load content when page loads
 document.addEventListener("DOMContentLoaded", function() {
